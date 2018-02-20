@@ -1,5 +1,5 @@
 ---
-layout : single
+layout : post
 title : "Antergos Grub Selection"
 date : "2018-01-20T08:38:47-05:00"
 ---
