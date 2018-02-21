@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title : "Urxvt Copy Paste Tweaking"
 date : "2017-08-18T14:07:29-05:00"
 ---

@@ -1,5 +1,5 @@
 ---
-layout : page
+layout : post
 title : "Reemplazo De Minúsculas Con Mayúsculas Con Emacs"
 date : "2017-02-09T02:31:55-05:00"
 ---

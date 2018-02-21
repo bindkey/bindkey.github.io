@@ -1,5 +1,5 @@
 ---
-layout : page
+layout : post
 title : "Turn Off Manjaro Kde Splash Screen if on Ssd"
 date : "2017-02-15T04:02:19-05:00"
 ---
