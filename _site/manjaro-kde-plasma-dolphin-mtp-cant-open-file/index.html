@@ -9,38 +9,38 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Antergos Grub Selection - El blog del tecnólogo</title>
-<meta name="description" content="During the installation of Antergos, there was an option to install the Linux LTS kernel along with the default latest stable version.">
+<!-- begin _includes/seo.html --><title>Manjaro Kde Plasma Dolphin Mtp Cant Open File - El blog del tecnólogo</title>
+<meta name="description" content="MTP implementation runs on most desktop environments without a problem. Except on KDE where it has had several problems in identifying and initializing a simple file from any of the devices that have been connected to the system, mainly through the USB port.">
 
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="El blog del tecnólogo">
-<meta property="og:title" content="Antergos Grub Selection">
-<meta property="og:url" content="https://bindkey.github.io/antergos-grub-selection/">
+<meta property="og:title" content="Manjaro Kde Plasma Dolphin Mtp Cant Open File">
+<meta property="og:url" content="https://bindkey.github.io/manjaro-kde-plasma-dolphin-mtp-cant-open-file/">
 
 
-  <meta property="og:description" content="During the installation of Antergos, there was an option to install the Linux LTS kernel along with the default latest stable version.">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2018-01-20T07:38:47-06:00">
+  <meta property="og:description" content="MTP implementation runs on most desktop environments without a problem. Except on KDE where it has had several problems in identifying and initializing a simple file from any of the devices that have been connected to the system, mainly through the USB port.">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2017-12-16T12:26:25-06:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="https://bindkey.github.io/antergos-grub-selection/">
+
+<link rel="canonical" href="https://bindkey.github.io/manjaro-kde-plasma-dolphin-mtp-cant-open-file/">
 
 
 
@@ -149,15 +149,15 @@
   
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Antergos Grub Selection">
-    <meta itemprop="description" content="During the installation of Antergos, there was an option to install the Linux LTS kernel along with the default latest stable version.">
-    <meta itemprop="datePublished" content="January 20, 2018">
+    <meta itemprop="headline" content="Manjaro Kde Plasma Dolphin Mtp Cant Open File">
+    <meta itemprop="description" content="MTP implementation runs on most desktop environments without a problem. Except on KDE where it has had several problems in identifying and initializing a simple file from any of the devices that have been connected to the system, mainly through the USB port.">
+    <meta itemprop="datePublished" content="December 16, 2017">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 class="page__title" itemprop="headline">Antergos Grub Selection
+          <h1 class="page__title" itemprop="headline">Manjaro Kde Plasma Dolphin Mtp Cant Open File
 </h1>
           
             <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
@@ -165,7 +165,7 @@
 
 
 
-  1 minute read
+  2 minute read
 </p>
           
         </header>
@@ -173,43 +173,29 @@
 
       <section class="page__content" itemprop="text">
         
-        <p>During the installation of Antergos, there was an option to install the Linux LTS kernel along with the default latest stable version.</p>
+        <p><strong>MTP</strong> implementation runs on most desktop environments without a problem. Except on KDE where it has had several problems in identifying and initializing a simple file from any of the devices that have been connected to the system, mainly through the USB port.</p>
 
-<p>Even though it was installed appropriately, the option to select the other kernel, could not be seen from the Grub selection window.</p>
+<p>It’s really a shame that although Plasma KDE fairly supports Bluetooth protocol better than the rest of other desktop environments, it largely fails with both gwenview and its default Dolphin manager to open up files directly.</p>
 
-<p>this is even after running the usual mkinitcpio -p <linux kernel=""> that loads the modules and other dependencies accordingly.</linux></p>
+<p>I have tried in a great many occasions to slither out many of these KDE errors by falsely attributing it to my lack of knowledge on its usage. But I can’t deny any longer that the system either works or it doesn’t. And one should no longer have to wait who-knows-how-long-and-when, before updates smother out its deficiencies.</p>
 
-<p>It’s good to remember that Grub configuration file though, resides on the /boot/default directory.</p>
+<p>Yes, I have tried to look up for the issue elsewhere such as as in <a href="https://bbs.archlinux.org/viewtopic.php?id=177028" target="_blank">mtp mount issues in KDE/Dolphin</a>, but many of the suggestions have not worked so far.</p>
 
-<p>With sudo privileges, access the file at /boot/default/grub first.</p>
+<p>Whereas with KDE, to my amazement - because at this point of its developmental phase, one would think that it should perform better and not worse - the problems all range from mild to critical, while <strong>xfce</strong> on the other hand, these unexpected malfunctions and sudden out-of-the-blue crashes do occur but at a lesser degree, and when one of these errors undermines the stability, the errors do not necessarily affect the overall functionality.</p>
 
-<p>Therein, and lying at the bottom of the configuration file, one can find the:</p>
+<p>I experienced and spoke at somewhat length about a <a href="/2017/12/14/manjaro-kde-plasma-error-unknown-application-folder/">manjaro kde error unknown application</a> post.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  # Uncomment to make GRUB remember the last selection. This requires to
-  # set 'GRUB_DEFAULT=saved' above.
-  #GRUB_SAVEDEFAULT="true"
-</code></pre></div></div>
+<p>In the wake of recent Bluetooth vulnerabilities that have happened,<a href="#blue"><sup id="blueref">1</sup></a>  and the history behind it in which several authors have researched the issue, it makes no sense to have a whole interface that handles this protocol better than most environments and yet fails when the to-be-expected approach to handle it differently or by using the right terminology, handling it without bluetooth at all in light of everything that has happened with it, by going directly through the use of the mtp protocol that takes care of it. And the mtp is supported without a major flaw in <strong>xfce</strong>, <strong>Gnome</strong>, and others.</p>
 
-<p>One could uncomment the GRUB_SAVEDEFAULT=”true” so the grub configuration file ‘remembers’ the selection.</p>
+<p>For further reading about <strong>MTP</strong>, is advised to visit the formidable wiki from Arch Linux at <a href="https://wiki.archlinux.org/index.php/MTP" target="_blank">MTP</a></p>
 
-<p>Furthermore, and right on the top of the file the default chosen selection can be specified by modifying the value of 0:</p>
+<p>It turns out that kio-extras is a dependency of Kde’s dolphin file manager, which apparently is partly responsible for the <code>failed to initlialize</code> error, but whichever is to be blamed in this regard, matters for as long as the user finds the KDE environment worthy to be used. In my case perhaps, the same opinion that for so long I’ve had of the software, has notably changed amid these recent problems: first with the <a href="/2017/12/14/manjaro-kde-plasma-error-unknown-application-folder/">manjaro kde error unknown application instance as highlighted earlier</a>, and now with the bluetooth problem.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  # GRUB boot loader configuration
-  GRUB_DEFAULT=0
-</code></pre></div></div>
+<p>Perhaps is worthy to revisit this desktop environment, but for now, it is in my opinion that there are better options out there from which to choose from, before having to put up with the inconsistencies and failures that have rendered the systems I have been running lately, useless in more than one occasion.</p>
 
-<p>To a 2 or 3 for the desired kernel. Which in my case, and if the LTS kernel is to be loaded instead, matched the kernel itself and the fallback for it.</p>
+<p><strong>References</strong></p>
 
-<p>By going this route, it no longer is necessary in specifying during the system startup, the desired kernel that one chooses to be loaded.</p>
-
-<p>Remember after making any changes to grub, to update the configuration file by running:</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> grub-mkconfig -o /boot/grub/grub.cfg
-</code></pre></div></div>
-
-<p>For more info about this, visit the wiki:</p>
-
-<p><a href="https://wiki.archlinux.org/index.php/GRUB/Tips_and_tricks" target="_blank">GRUB/Tips and tricks</a></p>
+<p><a href="https://mobile.slashdot.org/story/17/09/12/2030213/blueborne-vulnerabilities-impact-over-5-billion-bluetooth-enabled-devices" target="_blank">Blueborne vulnerabilities impact devices</a><a name="blue"></a><a href="#blueref">_↩︎</a></p>
 
 
         
@@ -221,7 +207,7 @@
 
 
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-01-20T07:38:47-06:00">January 20, 2018</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-12-16T12:26:25-06:00">December 16, 2017</time></p>
         
       </footer>
 
@@ -230,11 +216,11 @@
       
   <nav class="pagination">
     
-      <a href="https://bindkey.github.io/udisks2-udiskie-fares-better-than-ntfs-3g/" class="pagination--pager" title="Udisks2 Udiskie Fares Better Than Ntfs 3g
+      <a href="https://bindkey.github.io/manjaro-kde-plasma-error-unknown-application-folder/" class="pagination--pager" title="Manjaro Kde Plasma Error Unknown Application Folder
 ">Previous</a>
     
     
-      <a href="https://bindkey.github.io/antergos-keyboard-selection-during-installation/" class="pagination--pager" title="Antergos Keyboard Selection During Installation
+      <a href="https://bindkey.github.io/metadata-irreversible/" class="pagination--pager" title="Metadata Irreversible
 ">Next</a>
     
   </nav>
@@ -273,6 +259,34 @@
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">One of the drawbacks during the installation of Antergos Linux was in identifying the keyboard layout option that was previously selected during the media in...</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="https://bindkey.github.io/antergos-grub-selection/" rel="permalink">Antergos Grub Selection
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">During the installation of Antergos, there was an option to install the Linux LTS kernel along with the default latest stable version.
+
+</p>
   </article>
 </div>
         
@@ -330,35 +344,8 @@
   </article>
 </div>
         
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="https://bindkey.github.io/manjaro-kde-plasma-dolphin-mtp-cant-open-file/" rel="permalink">Manjaro Kde Plasma Dolphin Mtp Cant Open File
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  2 minute read
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">MTP implementation runs on most desktop environments without a problem. Except on KDE where it has had several problems in identifying and initializing a sim...</p>
-  </article>
-</div>
-        
       </div>
     </div>
-  
   
 </div>
 

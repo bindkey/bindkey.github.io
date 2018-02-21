@@ -9,38 +9,38 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Antergos Grub Selection - El blog del tecnólogo</title>
-<meta name="description" content="During the installation of Antergos, there was an option to install the Linux LTS kernel along with the default latest stable version.">
+<!-- begin _includes/seo.html --><title>Configurar El Idioma en Manjaro Kde - El blog del tecnólogo</title>
+<meta name="description" content="Para modificar el idioma que los elementos del menú muestren, al igual que el idioma con el que aparecería la hora, la fecha, y otros valores como los de la representación monetaria, se puede ir hasta las preferencias del sistema y después dándole a clic a Configuración regional.">
 
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="El blog del tecnólogo">
-<meta property="og:title" content="Antergos Grub Selection">
-<meta property="og:url" content="https://bindkey.github.io/antergos-grub-selection/">
+<meta property="og:title" content="Configurar El Idioma en Manjaro Kde">
+<meta property="og:url" content="https://bindkey.github.io/configurar-el-idioma-en-manjaro-kde/">
 
 
-  <meta property="og:description" content="During the installation of Antergos, there was an option to install the Linux LTS kernel along with the default latest stable version.">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2018-01-20T07:38:47-06:00">
+  <meta property="og:description" content="Para modificar el idioma que los elementos del menú muestren, al igual que el idioma con el que aparecería la hora, la fecha, y otros valores como los de la representación monetaria, se puede ir hasta las preferencias del sistema y después dándole a clic a Configuración regional.">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2017-02-26T11:44:42-06:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="https://bindkey.github.io/antergos-grub-selection/">
+
+<link rel="canonical" href="https://bindkey.github.io/configurar-el-idioma-en-manjaro-kde/">
 
 
 
@@ -149,15 +149,15 @@
   
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Antergos Grub Selection">
-    <meta itemprop="description" content="During the installation of Antergos, there was an option to install the Linux LTS kernel along with the default latest stable version.">
-    <meta itemprop="datePublished" content="January 20, 2018">
+    <meta itemprop="headline" content="Configurar El Idioma en Manjaro Kde">
+    <meta itemprop="description" content="Para modificar el idioma que los elementos del menú muestren, al igual que el idioma con el que aparecería la hora, la fecha, y otros valores como los de la representación monetaria, se puede ir hasta las preferencias del sistema y después dándole a clic a Configuración regional.">
+    <meta itemprop="datePublished" content="February 26, 2017">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 class="page__title" itemprop="headline">Antergos Grub Selection
+          <h1 class="page__title" itemprop="headline">Configurar El Idioma en Manjaro Kde
 </h1>
           
             <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
@@ -173,43 +173,44 @@
 
       <section class="page__content" itemprop="text">
         
-        <p>During the installation of Antergos, there was an option to install the Linux LTS kernel along with the default latest stable version.</p>
+        <p>Para modificar el idioma que los elementos del menú muestren, al igual que el idioma con el que aparecería la hora, la fecha, y otros valores como los de la representación monetaria, se puede ir hasta las <strong>preferencias del sistema</strong> y después dándole a clic a <strong>Configuración regional</strong>.</p>
 
-<p>Even though it was installed appropriately, the option to select the other kernel, could not be seen from the Grub selection window.</p>
+<p><img src="/images/modify-regional-language-spanish-manjaro-kde.png" alt="regional-language-spanish" /></p>
 
-<p>this is even after running the usual mkinitcpio -p <linux kernel=""> that loads the modules and other dependencies accordingly.</linux></p>
+<p>La ventana siguiente que lleva de título <strong>añadir y configurar la configuración regional</strong>, muestra las configuraciones regionales del sistema que  te permite (a mano derecha) añadir el otro idioma que deseas, a la pre-configurada lista de las regiones en el sistema. Debes notar también que una vez que esto sea especificado, el sistema requiere recomenzar para que los cambios se carguen adecuadamente en el sistema.</p>
 
-<p>It’s good to remember that Grub configuration file though, resides on the /boot/default directory.</p>
+<p><img src="/images/modify-regional-language-spanish-manjaro-kde-add.png" alt="regional-language-manjaro-add" /></p>
 
-<p>With sudo privileges, access the file at /boot/default/grub first.</p>
+<p>Por supuesto que es posible lograr esto mediante el intérprete de comandos a través de <code>localect</code></p>
 
-<p>Therein, and lying at the bottom of the configuration file, one can find the:</p>
+<p>según se muestra reflejado en <a href="https://wiki.archlinux.org/index.php/locale" target="_blank">wiki.archlinux.org</a></p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  # Uncomment to make GRUB remember the last selection. This requires to
-  # set 'GRUB_DEFAULT=saved' above.
-  #GRUB_SAVEDEFAULT="true"
-</code></pre></div></div>
+<p>Es decir,</p>
 
-<p>One could uncomment the GRUB_SAVEDEFAULT=”true” so the grub configuration file ‘remembers’ the selection.</p>
+<pre><code> localectl set-locale LANG=es_US.UTF 
+</code></pre>
 
-<p>Furthermore, and right on the top of the file the default chosen selection can be specified by modifying the value of 0:</p>
+<p>Para ver la lista de los locales en tu sistema, puedes emplear en este caso el siguiente comando:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  # GRUB boot loader configuration
-  GRUB_DEFAULT=0
-</code></pre></div></div>
+<pre><code> localectl list-locales 
+</code></pre>
 
-<p>To a 2 or 3 for the desired kernel. Which in my case, and if the LTS kernel is to be loaded instead, matched the kernel itself and the fallback for it.</p>
+<p>y de ahí seleccionaer el idioma regional que quisieras utilizar:</p>
 
-<p>By going this route, it no longer is necessary in specifying during the system startup, the desired kernel that one chooses to be loaded.</p>
+<p>una vez logrado este paso, es necesario ingresar:</p>
 
-<p>Remember after making any changes to grub, to update the configuration file by running:</p>
+<pre><code>localectl set-locale LANG=es_US.UTF-8 
+</code></pre>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> grub-mkconfig -o /boot/grub/grub.cfg
-</code></pre></div></div>
+<p>o el idioma de tu preferencia. Pongo ese solamente como un ejemplo donde se vea ente procedimiento.</p>
 
-<p>For more info about this, visit the wiki:</p>
+<p>Es bueno recalcar y como lo explica el sitio en <a href="https://wiki.archlinux.org/index.php/locale#Setting_the_system_locale" target="_blank">wiki.archlinux.org</a> que el fichero <code>/etc/locale.gen</code> muestra aquellas variables que se encuentran señaladas y que posteriormente serían cargadas en el fichero del sistema <code>/etc/locale.conf</code>.</p>
 
-<p><a href="https://wiki.archlinux.org/index.php/GRUB/Tips_and_tricks" target="_blank">GRUB/Tips and tricks</a></p>
+<p>Para más información acerca de esto vea la sección <strong>Setting the system locale</strong> en la wiki.</p>
+
+<p><strong>Referencias</strong></p>
+
+<p><a href="https://wiki.archlinux.org/">wiki.archlinux.org</a></p>
 
 
         
@@ -221,7 +222,7 @@
 
 
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-01-20T07:38:47-06:00">January 20, 2018</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-02-26T11:44:42-06:00">February 26, 2017</time></p>
         
       </footer>
 
@@ -230,11 +231,11 @@
       
   <nav class="pagination">
     
-      <a href="https://bindkey.github.io/udisks2-udiskie-fares-better-than-ntfs-3g/" class="pagination--pager" title="Udisks2 Udiskie Fares Better Than Ntfs 3g
+      <a href="https://bindkey.github.io/pantalla-en-reposo-con-manjaro-kde/" class="pagination--pager" title="Pantalla en Reposo Con Manjaro KDE
 ">Previous</a>
     
     
-      <a href="https://bindkey.github.io/antergos-keyboard-selection-during-installation/" class="pagination--pager" title="Antergos Keyboard Selection During Installation
+      <a href="https://bindkey.github.io/manjaro-desplaza-a-ubuntu/" class="pagination--pager" title="Manjaro Desplaza a Ubuntu
 ">Next</a>
     
   </nav>
@@ -273,6 +274,34 @@
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">One of the drawbacks during the installation of Antergos Linux was in identifying the keyboard layout option that was previously selected during the media in...</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="https://bindkey.github.io/antergos-grub-selection/" rel="permalink">Antergos Grub Selection
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">During the installation of Antergos, there was an option to install the Linux LTS kernel along with the default latest stable version.
+
+</p>
   </article>
 </div>
         
@@ -330,35 +359,8 @@
   </article>
 </div>
         
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="https://bindkey.github.io/manjaro-kde-plasma-dolphin-mtp-cant-open-file/" rel="permalink">Manjaro Kde Plasma Dolphin Mtp Cant Open File
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  2 minute read
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">MTP implementation runs on most desktop environments without a problem. Except on KDE where it has had several problems in identifying and initializing a sim...</p>
-  </article>
-</div>
-        
       </div>
     </div>
-  
   
 </div>
 

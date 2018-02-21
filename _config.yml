@@ -7,6 +7,10 @@
 
 minimal_mistakes_skin    : "air" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
+#google_fonts:
+#        - name: "Fira Sans"
+#          weight: "400,400i,600,600i"
+
 layout : single
 
 # Site Settings

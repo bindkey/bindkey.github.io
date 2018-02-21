@@ -1,0 +1,459 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.10.0 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Manjaro Xfce Qpdfview Problem With Qt5ct Unable to Load Plugin in First Attempt - El blog del tecnólogo</title>
+<meta name="description" content="I currently have two (2) identical - or that’s what it seemed like - xfce environments on two (2) different hardware systems.">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="El blog del tecnólogo">
+<meta property="og:title" content="Manjaro Xfce Qpdfview Problem With Qt5ct Unable to Load Plugin in First Attempt">
+<meta property="og:url" content="https://bindkey.github.io/manjaro-xfce-qpdfview-problem-with-qt5ct-unable-to-load-plugin-in-first-attempt/">
+
+
+  <meta property="og:description" content="I currently have two (2) identical - or that’s what it seemed like - xfce environments on two (2) different hardware systems.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2017-10-19T03:52:43-05:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://bindkey.github.io/manjaro-xfce-qpdfview-problem-with-qt5ct-unable-to-load-plugin-in-first-attempt/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Carlos",
+      "url": "https://bindkey.github.io",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="https://bindkey.github.io/feed.xml" type="application/atom+xml" rel="alternate" title="El blog del tecnólogo Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="https://bindkey.github.io/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--post">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="https://bindkey.github.io/">El blog del tecnólogo</a>
+        <ul class="visible-links">
+          
+            
+            <li class="masthead__menu-item">
+              <a href="https://bindkey.github.io/about/" >About</a>
+            </li>
+          
+        </ul>
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Manjaro Xfce Qpdfview Problem With Qt5ct Unable to Load Plugin in First Attempt">
+    <meta itemprop="description" content="I currently have two (2) identical - or that’s what it seemed like - xfce environments on two (2) different hardware systems.">
+    <meta itemprop="datePublished" content="October 19, 2017">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">Manjaro Xfce Qpdfview Problem With Qt5ct Unable to Load Plugin in First Attempt
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>I currently have two (2) identical - or that’s what it seemed like - <strong>xfce</strong> environments on two (2) different hardware systems.</p>
+
+<p>I always keep at hand a list of viewers and if there is any problem removing those to be found unnecessarily large or extremely light to the point of rendering them useless, I tend to check the Arch Wiki at <a href="https://wiki.archlinux.org/index.php/list_of_applications" target="_blank">List of Applications</a> for a refresher on what’s available at the moment.</p>
+
+<p>I’ve always found useful, more or less two (2), or three (3) of them, among them, with a quick copy-paste from the Arch Wiki:</p>
+
+<p>gv — Graphical user interface for the Ghostscript interpreter that allows to view and navigate through PostScript and PDF documents.</p>
+
+<p>ePDFView — Free lightweight PDF document viewer using the Poppler and GTK+ libraries. Development stopped.</p>
+
+<p>qpdfview — Tabbed document viewer. It uses Poppler for PDF support, libspectre for PS support, DjVuLibre for DjVu support, CUPS for printing support and the Qt toolkit for its interface.</p>
+
+<p>The latter, strangely enough, was behaving differently on one of the <strong>manjaro xfce</strong> systems.</p>
+
+<p>A quick google search turned pretty much nothing, related to this issue I was having: namely, the adjustment and consequent resizing for the Settings Window.</p>
+
+<p><img src="/images/manjaro-xfce-qpdfview-settings-box-wrong.png" width="680px" height="450px;" /></p>
+
+<p>As you can see from the image above, I was unable to get to the bottom of the window whereto I could’ve specified <strong>to cancel</strong> or <strong>apply</strong> the changes to take effect via a GUI. What use is a GUI if one can’t access the main settings of the program?</p>
+
+<p>This took me to the wrong path in trying to modify the settings upon which the <strong>Dialog box</strong> depended on.</p>
+
+<p>The settings for <code>qpdfview.conf</code> were found right under the <code>.conf/qpdfview/</code> directory.</p>
+
+<p>To no avail I tried to change the settings for the</p>
+
+<pre><code> settingsDialogSize=@Size(488 803)
+</code></pre>
+
+<p>on the <strong>qpdfview.conf</strong> file, but every single time I did so, even after changing the above size to other feasible settings, the settings window loaded the default and preconfigured values for it, rendering any change I had made earlier such as modifying the values for that <strong>settingsDialogSize</strong> onto the configuration file,  obsolete.</p>
+
+<p>Then I gave up tweaking around with the <code>qpdfview.conf</code> file. Even after removing this file, removing <strong>qpdfview</strong> along with all poppler libraries from the system, reinstalling the program again, logging out of the system, and restarting, and logging right back in, the problem still persisted.</p>
+
+<p>The settings window remained, remained useless for the most part - and from a GUI’s perspective.</p>
+
+<p>Of course I could have just pressed the <strong>carriage</strong> return key on the keyboard to apply the changes, or for that matter the <strong>escape</strong> key to discard any changes, but this was just besides the point, since it defeated the purpose of having GUI applications running. I needed it to be operational.</p>
+
+<p>I tried another venue.</p>
+
+<p>I noticed that every single time that the program <strong>qpdfview</strong> was invoked from the command line, several errors appeared, including the most significant of the lot:</p>
+
+<pre><code> qt5ct: using qt5ct plugin
+ qt5ct: D-Bus global menu: no
+ Could not load plug-in in first attempt: ""
+ "The shared library was not found."
+</code></pre>
+
+<p>the second of these messages was self-explanatory. The libraries upon which qpdfview relied upon, were not recognizing or finding the plugin.</p>
+
+<p>A quick search on google later regarding <strong>qt5ct</strong> did not provide a satisfactory explanation behind the <strong>qpdfview</strong> problem.</p>
+
+<p>I read some of the visual methods in adjusting the settings for <strong>qt</strong> on <a href="https://www.pcsuggest.com/qt5ct-change-qt5-application-style/" target="_blank">Change Qt5 application style with qt5ct</a></p>
+
+<p>So I started <strong>qt5ct</strong>, and I noticed that the default settings for the window was to have <strong>gtk2</strong> as the style to be loaded.</p>
+
+<p>Then right after I had changed it to one of the other values, I had high expectations that the changes would improve the dimensions of the dialog box settings for <strong>qpdfview</strong>. But I was wrong. It made everything worse off.</p>
+
+<p>I finally had to tweak around with the problem directly through the <code>qt5ct.conf</code> file by changing the style field. Only then the problem with <strong>qpdfview</strong> was resolved.</p>
+
+<pre><code> [Appearance]
+ color_scheme_path=
+ custom_palette=true
+ icon_theme=Vertex-Maia
+ style=gtk2
+</code></pre>
+
+<p>The style value was modified to <strong>Breeze</strong>, I saved the file and exited.</p>
+
+<p>The <strong>qt5ct.conf</strong> file should have on the Appearance the following:</p>
+
+<pre><code> [Appearance]
+ color_scheme_path=
+ custom_palette=true
+ icon_theme=Vertex-Maia
+ style=Breeze
+</code></pre>
+
+<p>Right after making the changes - not even a logout was required - <strong>qpdfview</strong> dialog box dimensions were working and definitely manageable. The only glitch - if it may be rightfully called as such - was an apparent back-to-back unwanted behavior in which the whole window for the settings, was not clearly visible, but one quick maximizing drag-around-movement maneuver, fixed the annoyance once and for all.</p>
+
+<p><img src="/images/qpdfview-correct-settings-dialog-box-1.png" width="680" height="450" /></p>
+
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-10-19T03:52:43-05:00">October 19, 2017</time></p>
+        
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="https://bindkey.github.io/manjaro-xfce-bluetooth-problem/" class="pagination--pager" title="Manjaro Xfce Bluetooth Problem
+">Previous</a>
+    
+    
+      <a href="https://bindkey.github.io/npm-warn-saveerror-enonent-during-uninstall/" class="pagination--pager" title="Npm Warn Saveerror Enonent During Uninstall
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="https://bindkey.github.io/antergos-keyboard-selection-during-installation/" rel="permalink">Antergos Keyboard Selection During Installation
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">One of the drawbacks during the installation of Antergos Linux was in identifying the keyboard layout option that was previously selected during the media in...</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="https://bindkey.github.io/antergos-grub-selection/" rel="permalink">Antergos Grub Selection
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">During the installation of Antergos, there was an option to install the Linux LTS kernel along with the default latest stable version.
+
+</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="https://bindkey.github.io/udisks2-udiskie-fares-better-than-ntfs-3g/" rel="permalink">Udisks2 Udiskie Fares Better Than Ntfs 3g
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">It is my opinion, based mostly not on what I’ve read, but instead on what I’ve encountered during the handling of a failed hard disk, that the disk volume mo...</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="https://bindkey.github.io/metadata-irreversible/" rel="permalink">Metadata Irreversible
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">One of the easiest ways to remove all metadata from a file, is by invoking 1
+
+</p>
+  </article>
+</div>
+        
+      </div>
+    </div>
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><input type="text" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    <div id="results" class="results"></div></div>
+      </div>
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+    
+    
+    <li><a href="https://bindkey.github.io/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2018 Carlos. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="https://bindkey.github.io/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+
+
+
+<script src="https://bindkey.github.io/assets/js/lunr/lunr.min.js"></script>
+<script src="https://bindkey.github.io/assets/js/lunr/lunr-store.js"></script>
+<script src="https://bindkey.github.io/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+  </body>
+</html>

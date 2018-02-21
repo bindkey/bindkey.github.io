@@ -9,38 +9,38 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Antergos Grub Selection - El blog del tecnólogo</title>
-<meta name="description" content="During the installation of Antergos, there was an option to install the Linux LTS kernel along with the default latest stable version.">
+<!-- begin _includes/seo.html --><title>Xfce Carpalx Layout - El blog del tecnólogo</title>
+<meta name="description" content="There are many ways to add the carpalx layout to X window system on GNU/Linux.">
 
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="El blog del tecnólogo">
-<meta property="og:title" content="Antergos Grub Selection">
-<meta property="og:url" content="https://bindkey.github.io/antergos-grub-selection/">
+<meta property="og:title" content="Xfce Carpalx Layout">
+<meta property="og:url" content="https://bindkey.github.io/xfce-carpalx-layout/">
 
 
-  <meta property="og:description" content="During the installation of Antergos, there was an option to install the Linux LTS kernel along with the default latest stable version.">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2018-01-20T07:38:47-06:00">
+  <meta property="og:description" content="There are many ways to add the carpalx layout to X window system on GNU/Linux.">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2017-07-09T12:09:38-05:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="https://bindkey.github.io/antergos-grub-selection/">
+
+<link rel="canonical" href="https://bindkey.github.io/xfce-carpalx-layout/">
 
 
 
@@ -149,15 +149,15 @@
   
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Antergos Grub Selection">
-    <meta itemprop="description" content="During the installation of Antergos, there was an option to install the Linux LTS kernel along with the default latest stable version.">
-    <meta itemprop="datePublished" content="January 20, 2018">
+    <meta itemprop="headline" content="Xfce Carpalx Layout">
+    <meta itemprop="description" content="There are many ways to add the carpalx layout to X window system on GNU/Linux.">
+    <meta itemprop="datePublished" content="July 09, 2017">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 class="page__title" itemprop="headline">Antergos Grub Selection
+          <h1 class="page__title" itemprop="headline">Xfce Carpalx Layout
 </h1>
           
             <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
@@ -173,43 +173,86 @@
 
       <section class="page__content" itemprop="text">
         
-        <p>During the installation of Antergos, there was an option to install the Linux LTS kernel along with the default latest stable version.</p>
+        <p>There are many ways to add the <a href="http://mkweb.bcgsc.ca/carpalx/" target="_blank">carpalx</a> layout to X window system on GNU/Linux.</p>
 
-<p>Even though it was installed appropriately, the option to select the other kernel, could not be seen from the Grub selection window.</p>
+<p>The desktop environment Plasma KDE does not have that problem. One could easily add it from the <strong>Input Devices</strong> from the <strong>settings</strong> of the system.</p>
 
-<p>this is even after running the usual mkinitcpio -p <linux kernel=""> that loads the modules and other dependencies accordingly.</linux></p>
+<p>If however, one is running <strong>Xfce</strong>, things are not as straightforward as one would like them to be.</p>
 
-<p>It’s good to remember that Grub configuration file though, resides on the /boot/default directory.</p>
+<p>At the bottom of this post, one can find the zip archive where the <em>carpax.xkb</em> file resides.</p>
 
-<p>With sudo privileges, access the file at /boot/default/grub first.</p>
+<p>Unzip the contents and open up the README.txt to have an idea of what to copy. But there are two (2) things/caveats to remember.</p>
 
-<p>Therein, and lying at the bottom of the configuration file, one can find the:</p>
+<p><strong>One shouldn’t modify the <em>symbols/us</em> file as it was suggested by the author</strong></p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  # Uncomment to make GRUB remember the last selection. This requires to
-  # set 'GRUB_DEFAULT=saved' above.
-  #GRUB_SAVEDEFAULT="true"
-</code></pre></div></div>
+<p>and</p>
 
-<p>One could uncomment the GRUB_SAVEDEFAULT=”true” so the grub configuration file ‘remembers’ the selection.</p>
+<p><strong>No need to follow Step 3 by loading the layout with setxkbmap carpalx. For one thing it will not load the default variant of the layout.</strong></p>
 
-<p>Furthermore, and right on the top of the file the default chosen selection can be specified by modifying the value of 0:</p>
+<p>I’m just posting the following as it currently appears on the README.txt file provided by the author.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  # GRUB boot loader configuration
-  GRUB_DEFAULT=0
-</code></pre></div></div>
+<h1 id="installation-instructions">INSTALLATION INSTRUCTIONS</h1>
 
-<p>To a 2 or 3 for the desired kernel. Which in my case, and if the LTS kernel is to be loaded instead, matched the kernel itself and the fallback for it.</p>
+<ol>
+<li><p>Copy carpalx.xkb to your XKB symbols directory (path my differ slightly)</p>
 
-<p>By going this route, it no longer is necessary in specifying during the system startup, the desired kernel that one chooses to be loaded.</p>
+<p>$ cp carpalx.xkb /usr/share/X11/xkb/symbols/carpalx</p></li>
 
-<p>Remember after making any changes to grub, to update the configuration file by running:</p>
+<li><p>Add the following lines to /usr/share/X11/xkb/symbols.dir</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> grub-mkconfig -o /boot/grub/grub.cfg
-</code></pre></div></div>
+<p>-dp—– a——- carpalx(qgmlwb)
+–p—– a——- carpalx(qgmlwy)
+–p—– a——- carpalx(qfmlwy)
+–p—– a——- carpalx(qwkrfy)
+–p—– a——- carpalx(qwyrfm)
+–p—– a——- carpalx(tnwmlc)</p></li>
 
-<p>For more info about this, visit the wiki:</p>
+<li><p>Now it should be possible to load the layouts with, e.g.</p>
 
-<p><a href="https://wiki.archlinux.org/index.php/GRUB/Tips_and_tricks" target="_blank">GRUB/Tips and tricks</a></p>
+<p>$ setxkbmap carpalx                            # defaults to QGMLWB
+$ setxkbmap -layout carpalx -variant qwkrfy    # to select other variants</p></li>
+
+<li><p>The following files should also be updated:</p>
+
+<p>/usr/share/X11/xkb/rules/xorg.lst
+/usr/share/X11/xkb/rules/xorg.xml</p></li>
+</ol>
+
+<h1 id="one-better-way-to-accomplish-it">One better way to accomplish it:</h1>
+
+<h1 id="instructions-to-follow">Instructions to follow</h1>
+
+<ol>
+<li><p>Copy indeed carpalx.xkb to the XKB symbols directory with sudo privileges</p>
+
+<p>$ cp carpalx.xkb /usr/share/X11/xkb/symbols/carpalx</p></li>
+
+<li><p>Go to <strong>/usr/share/X11/xkb/rules</strong></p>
+
+<p>$ cd /usr/share/X11/xkb/rules</p></li>
+
+<li><p>Once there and with sudo privileges again open <strong>evdev.lst</strong>. Add it.</p></li>
+</ol>
+
+<p><img src="/images/edit-evdevlst.png" alt="" /></p>
+
+<ol>
+<li>Edit the file <strong>edev.xml</strong> and add the variant to the list.</li>
+</ol>
+
+<p><img src="/images/edit-evdevxml.png" alt="" /></p>
+
+<ol>
+<li>Go to <strong>Keyboard Settings</strong> of the <strong>xfce</strong> graphical environment and add it. It will show on the list as shown in the following image:</li>
+</ol>
+
+<p><img src="/images/xfce carpalx layout · blog del tecnólogo_files/add-carpalx.png" alt="" /></p>
+
+<ul>
+<li>Downloadable zip files:</li>
+</ul>
+
+<p><a href="http://mkweb.bcgsc.ca/carpalx/distribution/carpalx-x11.zip">http://mkweb.bcgsc.ca/carpalx/distribution/carpalx-x11.zip</a></p>
 
 
         
@@ -221,7 +264,7 @@
 
 
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-01-20T07:38:47-06:00">January 20, 2018</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-07-09T12:09:38-05:00">July 09, 2017</time></p>
         
       </footer>
 
@@ -230,11 +273,11 @@
       
   <nav class="pagination">
     
-      <a href="https://bindkey.github.io/udisks2-udiskie-fares-better-than-ntfs-3g/" class="pagination--pager" title="Udisks2 Udiskie Fares Better Than Ntfs 3g
+      <a href="https://bindkey.github.io/manjaro-announces-password-weakness-en-los-instaladores-de-dvd_usb/" class="pagination--pager" title="Manjaro Announces Password Weakness en Los Instaladores De Dvd/usb
 ">Previous</a>
     
     
-      <a href="https://bindkey.github.io/antergos-keyboard-selection-during-installation/" class="pagination--pager" title="Antergos Keyboard Selection During Installation
+      <a href="https://bindkey.github.io/urxvt-background-tweaking/" class="pagination--pager" title="Urxvt Background Tweaking
 ">Next</a>
     
   </nav>
@@ -273,6 +316,34 @@
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">One of the drawbacks during the installation of Antergos Linux was in identifying the keyboard layout option that was previously selected during the media in...</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="https://bindkey.github.io/antergos-grub-selection/" rel="permalink">Antergos Grub Selection
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">During the installation of Antergos, there was an option to install the Linux LTS kernel along with the default latest stable version.
+
+</p>
   </article>
 </div>
         
@@ -330,35 +401,8 @@
   </article>
 </div>
         
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="https://bindkey.github.io/manjaro-kde-plasma-dolphin-mtp-cant-open-file/" rel="permalink">Manjaro Kde Plasma Dolphin Mtp Cant Open File
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  2 minute read
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">MTP implementation runs on most desktop environments without a problem. Except on KDE where it has had several problems in identifying and initializing a sim...</p>
-  </article>
-</div>
-        
       </div>
     </div>
-  
   
 </div>
 

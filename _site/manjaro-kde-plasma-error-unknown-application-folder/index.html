@@ -9,38 +9,38 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Antergos Grub Selection - El blog del tecnólogo</title>
-<meta name="description" content="During the installation of Antergos, there was an option to install the Linux LTS kernel along with the default latest stable version.">
+<!-- begin _includes/seo.html --><title>Manjaro Kde Plasma Error Unknown Application Folder - El blog del tecnólogo</title>
+<meta name="description" content="It’s apparently a foolish idea to login as root from a file manager on Plasma KDE.">
 
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="El blog del tecnólogo">
-<meta property="og:title" content="Antergos Grub Selection">
-<meta property="og:url" content="https://bindkey.github.io/antergos-grub-selection/">
+<meta property="og:title" content="Manjaro Kde Plasma Error Unknown Application Folder">
+<meta property="og:url" content="https://bindkey.github.io/manjaro-kde-plasma-error-unknown-application-folder/">
 
 
-  <meta property="og:description" content="During the installation of Antergos, there was an option to install the Linux LTS kernel along with the default latest stable version.">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2018-01-20T07:38:47-06:00">
+  <meta property="og:description" content="It’s apparently a foolish idea to login as root from a file manager on Plasma KDE.">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2017-12-14T12:28:52-06:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="https://bindkey.github.io/antergos-grub-selection/">
+
+<link rel="canonical" href="https://bindkey.github.io/manjaro-kde-plasma-error-unknown-application-folder/">
 
 
 
@@ -149,15 +149,15 @@
   
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Antergos Grub Selection">
-    <meta itemprop="description" content="During the installation of Antergos, there was an option to install the Linux LTS kernel along with the default latest stable version.">
-    <meta itemprop="datePublished" content="January 20, 2018">
+    <meta itemprop="headline" content="Manjaro Kde Plasma Error Unknown Application Folder">
+    <meta itemprop="description" content="It’s apparently a foolish idea to login as root from a file manager on Plasma KDE.">
+    <meta itemprop="datePublished" content="December 14, 2017">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 class="page__title" itemprop="headline">Antergos Grub Selection
+          <h1 class="page__title" itemprop="headline">Manjaro Kde Plasma Error Unknown Application Folder
 </h1>
           
             <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
@@ -165,7 +165,7 @@
 
 
 
-  1 minute read
+  2 minute read
 </p>
           
         </header>
@@ -173,43 +173,55 @@
 
       <section class="page__content" itemprop="text">
         
-        <p>During the installation of Antergos, there was an option to install the Linux LTS kernel along with the default latest stable version.</p>
+        <p>It’s apparently a foolish idea to login as root from a file manager on Plasma KDE.</p>
 
-<p>Even though it was installed appropriately, the option to select the other kernel, could not be seen from the Grub selection window.</p>
+<p>This was exactly what caused a number of problems, and among them, most notably, that I could not get past the login screen.</p>
 
-<p>this is even after running the usual mkinitcpio -p <linux kernel=""> that loads the modules and other dependencies accordingly.</linux></p>
+<p>Of course, little did it matter that I installed any of the other display managers available and removed the current in use from the command line. I was still unable to get past the login screen.</p>
 
-<p>It’s good to remember that Grub configuration file though, resides on the /boot/default directory.</p>
+<p>In other words, it wasn’t just the usual <code>login failed</code> which indicates the wrong username and/or password. This was exactly the opposite, as after inputting the password for the system, since <code>login automatically</code> was disabled, the screen would fall back as if it loading the kernel again, and then without further ado, back into the login screen.</p>
 
-<p>With sudo privileges, access the file at /boot/default/grub first.</p>
+<p>This feedback loop process was endless. I couldn’t but scourge on Google for some sort of information regarding the issue.</p>
 
-<p>Therein, and lying at the bottom of the configuration file, one can find the:</p>
+<p>One of the first queries to Google was with the terms <strong>plasma kde fails to startx</strong>, although I knew that the last element of the query was not the most accurate. For one, because the <strong>X server</strong> was somehow running, or else how could I have a login screen in the first place. But almost unsurprisingly, the first result from Google was from the Arch Linux forum entitled <a href="https://bbs.archlinux.org/viewtopic.php?id=193286" target="_blank">Cannot start plasma 5</a>.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  # Uncomment to make GRUB remember the last selection. This requires to
-  # set 'GRUB_DEFAULT=saved' above.
-  #GRUB_SAVEDEFAULT="true"
-</code></pre></div></div>
+<p>I tried to follow one of the recommendations and modify the last line to</p>
 
-<p>One could uncomment the GRUB_SAVEDEFAULT=”true” so the grub configuration file ‘remembers’ the selection.</p>
+<pre><code> exec startkde
+</code></pre>
 
-<p>Furthermore, and right on the top of the file the default chosen selection can be specified by modifying the value of 0:</p>
+<p><img src="/images/change-xinitrc-for-kde-plasma-login.png" alt="" /></p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  # GRUB boot loader configuration
-  GRUB_DEFAULT=0
-</code></pre></div></div>
+<p>but it made no difference.</p>
 
-<p>To a 2 or 3 for the desired kernel. Which in my case, and if the LTS kernel is to be loaded instead, matched the kernel itself and the fallback for it.</p>
+<p>Perhaps on other desktop environments the change on <strong>.xinitrc</strong> was a success, but at least on Manjaro Plasma KDE, all of it was failing and I was not able to get past the login screen.</p>
 
-<p>By going this route, it no longer is necessary in specifying during the system startup, the desired kernel that one chooses to be loaded.</p>
+<p>For example, the suggestion to modify the <strong>.xinitrc</strong> on the <strong>xfce</strong> desktop environment have proven to succeed without any major problem.</p>
 
-<p>Remember after making any changes to grub, to update the configuration file by running:</p>
+<p>See for example <a href="https://bbs.archlinux.org/viewtopic.php?id=147721" target="_blank">Can’t get past the login screen</a>, where modifying the <code>.xinitrc</code> was more than enough to get it started.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> grub-mkconfig -o /boot/grub/grub.cfg
-</code></pre></div></div>
+<p><img src="/images/change-xinitrc-for-xfce-login.png" alt="" /></p>
 
-<p>For more info about this, visit the wiki:</p>
+<p>At this point it was futile to modify any further the <strong>.xinitrc</strong> initialization file when moments before I had restarted the system, an error related to Plasma KDE had popped up on the screen:</p>
 
-<p><a href="https://wiki.archlinux.org/index.php/GRUB/Tips_and_tricks" target="_blank">GRUB/Tips and tricks</a></p>
+<p><img src="/images/plasma-error-window.png" width="500" /></p>
+
+<p>A couple more errors from the main file manager Dolphin showed for example the following:</p>
+
+<p><img src="/images/user-xbel-kde-plasma.png" width="500" /></p>
+
+<p>And also</p>
+
+<p><img src="/images/kio_applicationsrc-error.png" width="500" /></p>
+
+<p>At this point, after the infamous error with the <strong>kio_applicationsrc</strong>, I very well knew that the culprit of it all occurred when trying to login as root to Plasma from the Dolphin file manager.</p>
+
+<p>Later on, after giving up the have Manjaro KDE running on the system, I found a few posts that spoke about logging in as root on the Plasma environment.</p>
+
+<p>On the same post that for example was highlighted earlier, there is useful information as why running as root as KDE is altogether discouraged:</p>
+
+<p><img src="/images/dont-run-as-root-on-kde.png" alt="" /></p>
+
 
 
         
@@ -221,7 +233,7 @@
 
 
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-01-20T07:38:47-06:00">January 20, 2018</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-12-14T12:28:52-06:00">December 14, 2017</time></p>
         
       </footer>
 
@@ -230,11 +242,11 @@
       
   <nav class="pagination">
     
-      <a href="https://bindkey.github.io/udisks2-udiskie-fares-better-than-ntfs-3g/" class="pagination--pager" title="Udisks2 Udiskie Fares Better Than Ntfs 3g
+      <a href="https://bindkey.github.io/screen-locker-broken-manjaro-kde/" class="pagination--pager" title="Screen Locker Broken Manjaro Kde
 ">Previous</a>
     
     
-      <a href="https://bindkey.github.io/antergos-keyboard-selection-during-installation/" class="pagination--pager" title="Antergos Keyboard Selection During Installation
+      <a href="https://bindkey.github.io/manjaro-kde-plasma-dolphin-mtp-cant-open-file/" class="pagination--pager" title="Manjaro Kde Plasma Dolphin Mtp Cant Open File
 ">Next</a>
     
   </nav>
@@ -273,6 +285,34 @@
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">One of the drawbacks during the installation of Antergos Linux was in identifying the keyboard layout option that was previously selected during the media in...</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="https://bindkey.github.io/antergos-grub-selection/" rel="permalink">Antergos Grub Selection
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">During the installation of Antergos, there was an option to install the Linux LTS kernel along with the default latest stable version.
+
+</p>
   </article>
 </div>
         
@@ -330,35 +370,8 @@
   </article>
 </div>
         
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="https://bindkey.github.io/manjaro-kde-plasma-dolphin-mtp-cant-open-file/" rel="permalink">Manjaro Kde Plasma Dolphin Mtp Cant Open File
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  2 minute read
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">MTP implementation runs on most desktop environments without a problem. Except on KDE where it has had several problems in identifying and initializing a sim...</p>
-  </article>
-</div>
-        
       </div>
     </div>
-  
   
 </div>
 

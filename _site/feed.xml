@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.2">Jekyll</generator><link href="https://bindkey.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://bindkey.github.io/" rel="alternate" type="text/html" /><updated>2018-02-20T03:21:23-06:00</updated><id>https://bindkey.github.io/</id><title type="html">El blog del tecnólogo</title><subtitle>An amazing website.</subtitle><entry><title type="html">Antergos Keyboard Selection During Installation</title><link href="https://bindkey.github.io/antergos-keyboard-selection-during-installation/" rel="alternate" type="text/html" title="Antergos Keyboard Selection During Installation" /><published>2018-01-27T07:49:17-06:00</published><updated>2018-01-27T07:49:17-06:00</updated><id>https://bindkey.github.io/antergos-keyboard-selection-during-installation</id><content type="html" xml:base="https://bindkey.github.io/antergos-keyboard-selection-during-installation/">&lt;p&gt;One of the drawbacks during the installation of &lt;a href=&quot;https://antergos.com&quot; target=&quot;_blank&quot;&gt;Antergos Linux&lt;/a&gt; was in identifying the keyboard layout option that was previously selected during the media installation.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.2">Jekyll</generator><link href="https://bindkey.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://bindkey.github.io/" rel="alternate" type="text/html" /><updated>2018-02-21T00:57:55-06:00</updated><id>https://bindkey.github.io/</id><title type="html">El blog del tecnólogo</title><subtitle>An amazing website.</subtitle><entry><title type="html">Antergos Keyboard Selection During Installation</title><link href="https://bindkey.github.io/antergos-keyboard-selection-during-installation/" rel="alternate" type="text/html" title="Antergos Keyboard Selection During Installation" /><published>2018-01-27T07:49:17-06:00</published><updated>2018-01-27T07:49:17-06:00</updated><id>https://bindkey.github.io/antergos-keyboard-selection-during-installation</id><content type="html" xml:base="https://bindkey.github.io/antergos-keyboard-selection-during-installation/">&lt;p&gt;One of the drawbacks during the installation of &lt;a href=&quot;https://antergos.com&quot; target=&quot;_blank&quot;&gt;Antergos Linux&lt;/a&gt; was in identifying the keyboard layout option that was previously selected during the media installation.&lt;/p&gt;
 
 &lt;p&gt;As a result only the default variant was being used after installing the system.&lt;/p&gt;
 
@@ -78,4 +78,261 @@
 
 &lt;p&gt;&lt;a href=&quot;https://wiki.archlinux.org/index.php/NTFS-3G&quot; target=&quot;_blank&quot;&gt;ntfs-3g Arch Linux&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://github.com/coldfix/udiskie/wiki/Usage&quot; target=&quot;_blank&quot;&gt;udiskie on github&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">It is my opinion, based mostly not on what I’ve read, but instead on what I’ve encountered during the handling of a failed hard disk, that the disk volume mounting utility udisks2 fares better than say, ntfs-3g.</summary></entry></feed>
+&lt;p&gt;&lt;a href=&quot;https://github.com/coldfix/udiskie/wiki/Usage&quot; target=&quot;_blank&quot;&gt;udiskie on github&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">It is my opinion, based mostly not on what I’ve read, but instead on what I’ve encountered during the handling of a failed hard disk, that the disk volume mounting utility udisks2 fares better than say, ntfs-3g.</summary></entry><entry><title type="html">Metadata Irreversible</title><link href="https://bindkey.github.io/metadata-irreversible/" rel="alternate" type="text/html" title="Metadata Irreversible" /><published>2017-12-22T03:13:37-06:00</published><updated>2017-12-22T03:13:37-06:00</updated><id>https://bindkey.github.io/metadata-irreversible</id><content type="html" xml:base="https://bindkey.github.io/metadata-irreversible/">&lt;p&gt;One of the easiest ways to remove all metadata from a file, is by invoking &lt;a href=&quot;#exiftool&quot;&gt;&lt;sup id=&quot;refexiftool&quot;&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; $ exiftool -all= &amp;lt;file&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;However, this has the inconvenience of providing a security risk by reversing it as well with:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; $ exiftool -pdf-update:all= &amp;lt;file&amp;gt; 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;which pretty much inserts the metadata back into the file:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/exiftool-reversible-metadata-warning.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;According to the author of &lt;strong&gt;exiftool&lt;/strong&gt; this can be circumvented by issuing &lt;code&gt;qpdf --linearize &amp;lt;file.in&amp;gt; &amp;lt;file.out&amp;gt;&lt;/code&gt;. For further info about this see:
+&lt;a href=&quot;http://owl.phy.queensu.ca/~phil/exiftool/TagNames/PDF.html&quot; target=&quot;_blank&quot;&gt;PDF tags&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/pdftags-linearized.png&quot; width=&quot;700&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;&lt;strong&gt;References&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;a name=&quot;exiftool&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://sno.phy.queensu.ca/~phil/exiftool/exiftool_pod.html&quot; target=&quot;_blank&quot;&gt;exiftool man pages&lt;/a&gt; &lt;a href=&quot;#refexiftool&quot;&gt;_↩︎&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">One of the easiest ways to remove all metadata from a file, is by invoking 1</summary></entry><entry><title type="html">Manjaro Kde Plasma Dolphin Mtp Cant Open File</title><link href="https://bindkey.github.io/manjaro-kde-plasma-dolphin-mtp-cant-open-file/" rel="alternate" type="text/html" title="Manjaro Kde Plasma Dolphin Mtp Cant Open File" /><published>2017-12-16T12:26:25-06:00</published><updated>2017-12-16T12:26:25-06:00</updated><id>https://bindkey.github.io/manjaro-kde-plasma-dolphin-mtp-cant-open-file</id><content type="html" xml:base="https://bindkey.github.io/manjaro-kde-plasma-dolphin-mtp-cant-open-file/">&lt;p&gt;&lt;strong&gt;MTP&lt;/strong&gt; implementation runs on most desktop environments without a problem. Except on KDE where it has had several problems in identifying and initializing a simple file from any of the devices that have been connected to the system, mainly through the USB port.&lt;/p&gt;
+
+&lt;p&gt;It’s really a shame that although Plasma KDE fairly supports Bluetooth protocol better than the rest of other desktop environments, it largely fails with both gwenview and its default Dolphin manager to open up files directly.&lt;/p&gt;
+
+&lt;p&gt;I have tried in a great many occasions to slither out many of these KDE errors by falsely attributing it to my lack of knowledge on its usage. But I can’t deny any longer that the system either works or it doesn’t. And one should no longer have to wait who-knows-how-long-and-when, before updates smother out its deficiencies.&lt;/p&gt;
+
+&lt;p&gt;Yes, I have tried to look up for the issue elsewhere such as as in &lt;a href=&quot;https://bbs.archlinux.org/viewtopic.php?id=177028&quot; target=&quot;_blank&quot;&gt;mtp mount issues in KDE/Dolphin&lt;/a&gt;, but many of the suggestions have not worked so far.&lt;/p&gt;
+
+&lt;p&gt;Whereas with KDE, to my amazement - because at this point of its developmental phase, one would think that it should perform better and not worse - the problems all range from mild to critical, while &lt;strong&gt;xfce&lt;/strong&gt; on the other hand, these unexpected malfunctions and sudden out-of-the-blue crashes do occur but at a lesser degree, and when one of these errors undermines the stability, the errors do not necessarily affect the overall functionality.&lt;/p&gt;
+
+&lt;p&gt;I experienced and spoke at somewhat length about a &lt;a href=&quot;/2017/12/14/manjaro-kde-plasma-error-unknown-application-folder/&quot;&gt;manjaro kde error unknown application&lt;/a&gt; post.&lt;/p&gt;
+
+&lt;p&gt;In the wake of recent Bluetooth vulnerabilities that have happened,&lt;a href=&quot;#blue&quot;&gt;&lt;sup id=&quot;blueref&quot;&gt;1&lt;/sup&gt;&lt;/a&gt;  and the history behind it in which several authors have researched the issue, it makes no sense to have a whole interface that handles this protocol better than most environments and yet fails when the to-be-expected approach to handle it differently or by using the right terminology, handling it without bluetooth at all in light of everything that has happened with it, by going directly through the use of the mtp protocol that takes care of it. And the mtp is supported without a major flaw in &lt;strong&gt;xfce&lt;/strong&gt;, &lt;strong&gt;Gnome&lt;/strong&gt;, and others.&lt;/p&gt;
+
+&lt;p&gt;For further reading about &lt;strong&gt;MTP&lt;/strong&gt;, is advised to visit the formidable wiki from Arch Linux at &lt;a href=&quot;https://wiki.archlinux.org/index.php/MTP&quot; target=&quot;_blank&quot;&gt;MTP&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;It turns out that kio-extras is a dependency of Kde’s dolphin file manager, which apparently is partly responsible for the &lt;code&gt;failed to initlialize&lt;/code&gt; error, but whichever is to be blamed in this regard, matters for as long as the user finds the KDE environment worthy to be used. In my case perhaps, the same opinion that for so long I’ve had of the software, has notably changed amid these recent problems: first with the &lt;a href=&quot;/2017/12/14/manjaro-kde-plasma-error-unknown-application-folder/&quot;&gt;manjaro kde error unknown application instance as highlighted earlier&lt;/a&gt;, and now with the bluetooth problem.&lt;/p&gt;
+
+&lt;p&gt;Perhaps is worthy to revisit this desktop environment, but for now, it is in my opinion that there are better options out there from which to choose from, before having to put up with the inconsistencies and failures that have rendered the systems I have been running lately, useless in more than one occasion.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;References&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://mobile.slashdot.org/story/17/09/12/2030213/blueborne-vulnerabilities-impact-over-5-billion-bluetooth-enabled-devices&quot; target=&quot;_blank&quot;&gt;Blueborne vulnerabilities impact devices&lt;/a&gt;&lt;a name=&quot;blue&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#blueref&quot;&gt;_↩︎&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">MTP implementation runs on most desktop environments without a problem. Except on KDE where it has had several problems in identifying and initializing a simple file from any of the devices that have been connected to the system, mainly through the USB port.</summary></entry><entry><title type="html">Manjaro Kde Plasma Error Unknown Application Folder</title><link href="https://bindkey.github.io/manjaro-kde-plasma-error-unknown-application-folder/" rel="alternate" type="text/html" title="Manjaro Kde Plasma Error Unknown Application Folder" /><published>2017-12-14T12:28:52-06:00</published><updated>2017-12-14T12:28:52-06:00</updated><id>https://bindkey.github.io/manjaro-kde-plasma-error-unknown-application-folder</id><content type="html" xml:base="https://bindkey.github.io/manjaro-kde-plasma-error-unknown-application-folder/">&lt;p&gt;It’s apparently a foolish idea to login as root from a file manager on Plasma KDE.&lt;/p&gt;
+
+&lt;p&gt;This was exactly what caused a number of problems, and among them, most notably, that I could not get past the login screen.&lt;/p&gt;
+
+&lt;p&gt;Of course, little did it matter that I installed any of the other display managers available and removed the current in use from the command line. I was still unable to get past the login screen.&lt;/p&gt;
+
+&lt;p&gt;In other words, it wasn’t just the usual &lt;code&gt;login failed&lt;/code&gt; which indicates the wrong username and/or password. This was exactly the opposite, as after inputting the password for the system, since &lt;code&gt;login automatically&lt;/code&gt; was disabled, the screen would fall back as if it loading the kernel again, and then without further ado, back into the login screen.&lt;/p&gt;
+
+&lt;p&gt;This feedback loop process was endless. I couldn’t but scourge on Google for some sort of information regarding the issue.&lt;/p&gt;
+
+&lt;p&gt;One of the first queries to Google was with the terms &lt;strong&gt;plasma kde fails to startx&lt;/strong&gt;, although I knew that the last element of the query was not the most accurate. For one, because the &lt;strong&gt;X server&lt;/strong&gt; was somehow running, or else how could I have a login screen in the first place. But almost unsurprisingly, the first result from Google was from the Arch Linux forum entitled &lt;a href=&quot;https://bbs.archlinux.org/viewtopic.php?id=193286&quot; target=&quot;_blank&quot;&gt;Cannot start plasma 5&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I tried to follow one of the recommendations and modify the last line to&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; exec startkde
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/change-xinitrc-for-kde-plasma-login.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;but it made no difference.&lt;/p&gt;
+
+&lt;p&gt;Perhaps on other desktop environments the change on &lt;strong&gt;.xinitrc&lt;/strong&gt; was a success, but at least on Manjaro Plasma KDE, all of it was failing and I was not able to get past the login screen.&lt;/p&gt;
+
+&lt;p&gt;For example, the suggestion to modify the &lt;strong&gt;.xinitrc&lt;/strong&gt; on the &lt;strong&gt;xfce&lt;/strong&gt; desktop environment have proven to succeed without any major problem.&lt;/p&gt;
+
+&lt;p&gt;See for example &lt;a href=&quot;https://bbs.archlinux.org/viewtopic.php?id=147721&quot; target=&quot;_blank&quot;&gt;Can’t get past the login screen&lt;/a&gt;, where modifying the &lt;code&gt;.xinitrc&lt;/code&gt; was more than enough to get it started.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/change-xinitrc-for-xfce-login.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;At this point it was futile to modify any further the &lt;strong&gt;.xinitrc&lt;/strong&gt; initialization file when moments before I had restarted the system, an error related to Plasma KDE had popped up on the screen:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/plasma-error-window.png&quot; width=&quot;500&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;A couple more errors from the main file manager Dolphin showed for example the following:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/user-xbel-kde-plasma.png&quot; width=&quot;500&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;And also&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/kio_applicationsrc-error.png&quot; width=&quot;500&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;At this point, after the infamous error with the &lt;strong&gt;kio_applicationsrc&lt;/strong&gt;, I very well knew that the culprit of it all occurred when trying to login as root to Plasma from the Dolphin file manager.&lt;/p&gt;
+
+&lt;p&gt;Later on, after giving up the have Manjaro KDE running on the system, I found a few posts that spoke about logging in as root on the Plasma environment.&lt;/p&gt;
+
+&lt;p&gt;On the same post that for example was highlighted earlier, there is useful information as why running as root as KDE is altogether discouraged:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/dont-run-as-root-on-kde.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">It’s apparently a foolish idea to login as root from a file manager on Plasma KDE.</summary></entry><entry><title type="html">Screen Locker Broken Manjaro Kde</title><link href="https://bindkey.github.io/screen-locker-broken-manjaro-kde/" rel="alternate" type="text/html" title="Screen Locker Broken Manjaro Kde" /><published>2017-12-09T12:58:20-06:00</published><updated>2017-12-09T12:58:20-06:00</updated><id>https://bindkey.github.io/screen-locker-broken-manjaro-kde</id><content type="html" xml:base="https://bindkey.github.io/screen-locker-broken-manjaro-kde/">&lt;p&gt;While updating a fresh installation of Manjaro KDE, the screen locked.
+Apparently the default settings for the system, enabled this behavior without
+further ado.&lt;/p&gt;
+
+&lt;p&gt;As a result of this problem, the surprising part came afterward when the updates that were being downloaded, suddenly crashed the system. This led to the nonetheless bothersome problem of &lt;code&gt;modules.devname not found&lt;/code&gt; error followed by the no more troublesome error &lt;code&gt;you are now being dropped into an emergency shell&lt;/code&gt; and &lt;code&gt;sh can't access tty; job control turned off&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;I didn’t have at the time a live media to access the system. Although I knew the that the sudden crashing during the download of updates , was one of the problems underlying the &lt;code&gt;modules.devname not found&lt;/code&gt; error.&lt;/p&gt;
+
+&lt;p&gt;A quick google searched returned  &lt;a href=&quot;https://unix.stackexchange.com/questions/355689/manjaro-fails-to-boot-modules-devname-not-found-then-unknown-disk-uuid-error&quot; target=&quot;_blank&quot;&gt;Manjaro fails to boot, modules.devname not found&lt;/a&gt; a result which provided an answer that pointed to access the system with Manjaro’s own &lt;code&gt;mhwd-chroot&lt;/code&gt; command to access the emergency shell. See &lt;a href=&quot;https://wiki.manjaro.org/index.php/Restore_the_GRUB_Bootloader#Chroot_into_your_existing_Manjaro_Installation&quot; target=&quot;_blank&quot;&gt;Chroot into your existing Manjaro Installation&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/mhwd-chroot-steps.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;And as the already mentioned answer on the unix.stackexchange.com site suggested, it was necessary to reload the image again.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/chroot-answer-mkinitcpio.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">While updating a fresh installation of Manjaro KDE, the screen locked. Apparently the default settings for the system, enabled this behavior without further ado.</summary></entry><entry><title type="html">Configuring Kakoune Kakrc</title><link href="https://bindkey.github.io/configuring-kakoune-kakrc/" rel="alternate" type="text/html" title="Configuring Kakoune Kakrc" /><published>2017-12-06T11:50:38-06:00</published><updated>2017-12-06T11:50:38-06:00</updated><id>https://bindkey.github.io/configuring-kakoune-kakrc</id><content type="html" xml:base="https://bindkey.github.io/configuring-kakoune-kakrc/">&lt;p&gt;Configuring the &lt;a href=&quot;https://github.com/mawww/kakoune&quot; target=&quot;_blank&quot;&gt;kakoune text editor&lt;/a&gt; initialization file has been nothing short of a chore, as it requires the path environment to be correctly set, before any changes on the &lt;code&gt;kakrc&lt;/code&gt; take ahold of the settings.&lt;/p&gt;
+
+&lt;p&gt;As the tutorial suggests, see &lt;a href=&quot;https://github.com/mawww/kakoune#configuration-autoloading&quot; target=&quot;_blank&quot;&gt;Configuration and autoloading&lt;/a&gt;, if it is launched with the &lt;code&gt;-n&lt;/code&gt; switch, kakoune will source the &lt;code&gt;../share/kak/kakrc&lt;/code&gt;, but on a unrelated issue but nonetheless relevant about the correct location for the initialization file, the developer clearly stated that:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;The kakrc file in share is Kakounes init script, it is not intended to be user edited. It is actually that script that will load your user configuration in ~/.config/kak/kakrc.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/dont-use-share-kakrc.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Thus, it is necessary to set the environment first on any Unix system. The command &lt;code&gt;setenv&lt;/code&gt; is used for the &lt;strong&gt;csh&lt;/strong&gt; shell, whereas in &lt;strong&gt;bash&lt;/strong&gt;, this is accomplished through the &lt;code&gt;export&lt;/code&gt; command.&lt;/p&gt;
+
+&lt;p&gt;To find out whether for example, &lt;code&gt;XDG_CONFIG_HOME&lt;/code&gt; was set, is necessary to invoke on the terminal:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; printenv XDG_CONFIG_HOME
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;which if it does not return a value, the environment has not been set yet.&lt;/p&gt;
+
+&lt;p&gt;To set the environment across sessions, note it accordingly on your &lt;code&gt;bashrc&lt;/code&gt; file with the &lt;code&gt;export&lt;/code&gt; command:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; export XDG_CONFIG_HOME=$HOME/.config
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;create a directory &lt;strong&gt;kak&lt;/strong&gt; under that environment, and further create your init file &lt;strong&gt;kakrc&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Most of the available settings will be available without further modifications. That is, some of the commands that are loaded by not using a &lt;code&gt;kakrc&lt;/code&gt; file, will not have to be further tweaked with.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; colorscheme &amp;lt;tab completion&amp;gt; &amp;lt;name of theme&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;can be identified without a problem.&lt;/p&gt;
+
+&lt;p&gt;There are, however, a handful of those that would have to be further tweaked with, in order to load the &lt;strong&gt;kakrc&lt;/strong&gt; init file correctly.&lt;/p&gt;
+
+&lt;p&gt;Take for example, &lt;code&gt;autowrap-enable&lt;/code&gt;, which normally applies soft wrap manipulation to the lines.&lt;/p&gt;
+
+&lt;p&gt;According to the developer,&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;autowrapping is provided by the autowrap.kak script (which should be loaded by default), enable it for a buffer with the autowrap-enable command, that you probably want to put in a hook (for example if you want to always enable autowrap, add hook global WinCreate .* %{ autowrap-enable } in your kakrc. the autowrap_column option controls the column on which to autowrap.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;See &lt;a href=&quot;https://github.com/mawww/kakoune/issues/419&quot; target=&quot;_blank&quot;&gt;Noob questions&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/autowrap-kakrc.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Further customizations to map certain keys are also necessary.&lt;/p&gt;
+
+&lt;p&gt;For example, to map the &lt;code&gt;\&lt;/code&gt; backslash key to say the &lt;code&gt;;&lt;/code&gt; semicolon., it’s imperative to precede the *&lt;em&gt;*&lt;/em&gt; key with the &lt;code&gt;%&lt;/code&gt; percent sign and further enclose the &lt;code&gt;\&lt;/code&gt; backslash key within curly brackets &lt;code&gt;{}&lt;/code&gt;, so the final code would be something like:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; map buffer insert %{\} ';' 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;of course, if the settings are desirable to be loaded globally, then&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; map global insert %{\} ';'
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;needs to be specified accordingly on the initialization file.&lt;/p&gt;
+
+&lt;p&gt;See for example this issue: &lt;a href=&quot;https://github.com/mawww/kakoune/issues/419&quot; target=&quot;_blank&quot;&gt;can’t map to backslash&lt;/a&gt;, which touched upon the problem, and further linked &lt;a href=&quot;https://github.com/mawww/kakoune/issues/1049&quot;&gt;https://github.com/mawww/kakoune/issues/1049&lt;/a&gt; and &lt;a href=&quot;https://github.com/mawww/kakoune/issues/1221&quot;&gt;https://github.com/mawww/kakoune/issues/1221&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;It’s certainly two-fold that by specifying:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; map buffer insert ';' \ 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;the behavior to have the &lt;code&gt;\&lt;/code&gt; inserted, is easily accomplished, as shown on the example above, but the same is not true, by having the same characters inversed within the strings, that would yield the correct results.&lt;/p&gt;
+
+&lt;p&gt;for example whereas&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; map buffer insert ';' \ 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;is correct, a simple &lt;code&gt;map buffer insert '\' ;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;throws an error with the message &lt;code&gt;parse error: unterminated string '...'&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;It’s therefore necessary to have:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; map buffer insert %{;} \
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;the same is true if one were to &lt;code&gt;map buffer insert '\' %{;}&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;one of the methods that would work across buffers, is to have such characters enclosed within curly brackets and further preceded by the &lt;code&gt;%&lt;/code&gt; sign&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; map buffer insert %{\} %{;} 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;and&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; map buffer insert %{;} %{\} 
+&lt;/code&gt;&lt;/pre&gt;</content><author><name></name></author><summary type="html">Configuring the kakoune text editor initialization file has been nothing short of a chore, as it requires the path environment to be correctly set, before any changes on the kakrc take ahold of the settings.</summary></entry><entry><title type="html">Network Has Been Disconnected Manjaro Kde Xfce</title><link href="https://bindkey.github.io/network-has-been-disconnected-manjaro-kde-xfce/" rel="alternate" type="text/html" title="Network Has Been Disconnected Manjaro Kde Xfce" /><published>2017-12-01T12:41:54-06:00</published><updated>2017-12-01T12:41:54-06:00</updated><id>https://bindkey.github.io/network-has-been-disconnected-manjaro-kde-xfce</id><content type="html" xml:base="https://bindkey.github.io/network-has-been-disconnected-manjaro-kde-xfce/">&lt;p&gt;For some unknown reason, I was getting the message &lt;code&gt;network has been disconnected&lt;/code&gt; even on connections that have been previously used.&lt;/p&gt;
+
+&lt;p&gt;Contrary to the post entitled &lt;strong&gt;NetworkManager doesn’t automatically ask for a password for new network&lt;/strong&gt;, see &lt;a href=&quot;https://bbs.archlinux.org/viewtopic.php?id=142066&quot; target=&quot;_blank&quot;&gt;see this post on bbs.archlinux.org&lt;/a&gt; in my case the connection was used many times before.&lt;/p&gt;
+
+&lt;p&gt;The dependency problem that has plagued this bug seemed to make a comeback on a most of Manjaro desktop environments.&lt;/p&gt;
+
+&lt;p&gt;Installing, or better put, reinstalling it with&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; yaourt -S gnome-keyring
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;seemed to resolve the issue.&lt;/p&gt;
+
+&lt;p&gt;The same problem hasn’t been experienced on Antergos distribution.&lt;/p&gt;</content><author><name></name></author><summary type="html">For some unknown reason, I was getting the message network has been disconnected even on connections that have been previously used.</summary></entry><entry><title type="html">Mounting a Windows Hard Drive on Arch Linux</title><link href="https://bindkey.github.io/mounting-a-windows-hard-drive-on-arch-linux/" rel="alternate" type="text/html" title="Mounting a Windows Hard Drive on Arch Linux" /><published>2017-11-24T12:40:27-06:00</published><updated>2017-11-24T12:40:27-06:00</updated><id>https://bindkey.github.io/mounting-a-windows-hard-drive-on-arch-linux</id><content type="html" xml:base="https://bindkey.github.io/mounting-a-windows-hard-drive-on-arch-linux/">&lt;p&gt;After following some of the advice on &lt;a href=&quot;https://wiki.archlinux.org/index.php/NTFS-3G&quot;&gt;ntfs-3g arch linux&lt;/a&gt; entry which described the procedure to mount a windows system:&lt;/p&gt;
+
+&lt;p&gt;A &lt;code&gt;lsblk -f&lt;/code&gt; call on the filesystem returned:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; sdb                                                         
+ ├─sdb1 vfat   SYSTEM   
+ ├─sdb2 ntfs   Recovery 
+ ├─sdb3                 
+ ├─sdb4 ntfs   OS       
+ └─sdb5 ntfs   Restore  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I was after &lt;strong&gt;sdb4&lt;/strong&gt; in this case. So I invoked on the command line:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; $ ntfs-3g /dev/sdb4 /mnt/fat/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Which returned the message:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; Unprivileged user can not mount NTFS block devices using the external FUSE
+ library. Either mount the volume as root, or rebuild NTFS-3G with integrated
+ FUSE support and make it setuid root. Please see more information at
+ http://tuxera.com/community/ntfs-3g-faq/#unprivileged
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;So with sudo privileges I invoked it again, but this time around the more precise error message that &lt;em&gt;Input/output error NTFS is inconsistent&lt;/em&gt; was returned on the terminal. The entire message was as follows:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; ntfs_attr_pread_i: ntfs_pread failed: Input/output error
+ Failed to read of MFT, mft=391080 count=1 br=-1: Input/output error
+ Falling back to read-only mount because the NTFS partition is in an
+ unsafe state. Please resume and shutdown Windows fully (no hibernation
+ or fast restarting.)
+ ntfs_attr_pread_i: ntfs_pread failed: Input/output error
+ Failed to read NTFS $Bitmap: Input/output error
+ NTFS is either inconsistent, or there is a hardware fault, or it's a
+ SoftRAID/FakeRAID hardware. In the first case run chkdsk /f on Windows
+ then reboot into Windows twice. The usage of the /f parameter is very
+ important! If the device is a SoftRAID/FakeRAID then first activate
+ it
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If I were to invoke it with &lt;code&gt;mount&lt;/code&gt; instead of &lt;code&gt;ntfs-3g&lt;/code&gt;, then it would have mounted it without a setback&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; $ sudo mount -t ntfs-3g /dev/sdb4 /mnt/fat
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;successfully mounted it and I was able to access the files on that hard drive.&lt;/p&gt;</content><author><name></name></author><summary type="html">After following some of the advice on ntfs-3g arch linux entry which described the procedure to mount a windows system:</summary></entry></feed>

@@ -9,38 +9,38 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Antergos Grub Selection - El blog del tecnólogo</title>
-<meta name="description" content="During the installation of Antergos, there was an option to install the Linux LTS kernel along with the default latest stable version.">
+<!-- begin _includes/seo.html --><title>Pantalla en Reposo Con Manjaro KDE - El blog del tecnólogo</title>
+<meta name="description" content="Cada vez que se trabaja con algún entorno gráfico en los sistemas GNU/Linux, como GNOME, xfce, MATE, al igual que en KDE, uno se pone al amparo de los desarrolladores de estos sistemas.">
 
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="El blog del tecnólogo">
-<meta property="og:title" content="Antergos Grub Selection">
-<meta property="og:url" content="https://bindkey.github.io/antergos-grub-selection/">
+<meta property="og:title" content="Pantalla en Reposo Con Manjaro KDE">
+<meta property="og:url" content="https://bindkey.github.io/pantalla-en-reposo-con-manjaro-kde/">
 
 
-  <meta property="og:description" content="During the installation of Antergos, there was an option to install the Linux LTS kernel along with the default latest stable version.">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2018-01-20T07:38:47-06:00">
+  <meta property="og:description" content="Cada vez que se trabaja con algún entorno gráfico en los sistemas GNU/Linux, como GNOME, xfce, MATE, al igual que en KDE, uno se pone al amparo de los desarrolladores de estos sistemas.">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2017-02-24T12:45:58-06:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="https://bindkey.github.io/antergos-grub-selection/">
+
+<link rel="canonical" href="https://bindkey.github.io/pantalla-en-reposo-con-manjaro-kde/">
 
 
 
@@ -149,15 +149,15 @@
   
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Antergos Grub Selection">
-    <meta itemprop="description" content="During the installation of Antergos, there was an option to install the Linux LTS kernel along with the default latest stable version.">
-    <meta itemprop="datePublished" content="January 20, 2018">
+    <meta itemprop="headline" content="Pantalla en Reposo Con Manjaro KDE">
+    <meta itemprop="description" content="Cada vez que se trabaja con algún entorno gráfico en los sistemas GNU/Linux, como GNOME, xfce, MATE, al igual que en KDE, uno se pone al amparo de los desarrolladores de estos sistemas.">
+    <meta itemprop="datePublished" content="February 24, 2017">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 class="page__title" itemprop="headline">Antergos Grub Selection
+          <h1 class="page__title" itemprop="headline">Pantalla en Reposo Con Manjaro KDE
 </h1>
           
             <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
@@ -165,7 +165,7 @@
 
 
 
-  1 minute read
+  2 minute read
 </p>
           
         </header>
@@ -173,43 +173,36 @@
 
       <section class="page__content" itemprop="text">
         
-        <p>During the installation of Antergos, there was an option to install the Linux LTS kernel along with the default latest stable version.</p>
+        <p>Cada vez que se trabaja con algún entorno gráfico en los sistemas GNU/Linux, como GNOME, xfce, MATE, al igual que en KDE, uno se pone al amparo de los desarrolladores de estos sistemas.</p>
 
-<p>Even though it was installed appropriately, the option to select the other kernel, could not be seen from the Grub selection window.</p>
+<p>Digo al amparo, porque uno tiene que estar a esperas de lo que estos programadores decidan sobre las configuraciones idóneas del sistema. Y muchas veces, como es de esperar y se ha comprobado a través del tiempo, no han sido las más eficientes decisiones, desde el punto de vista del usuario.</p>
 
-<p>this is even after running the usual mkinitcpio -p <linux kernel=""> that loads the modules and other dependencies accordingly.</linux></p>
+<p>Si se le pregunta al usuario cuáles serían las mejores maneras para tener acceso a estos servicios gráficos, muchos quizás darían diferentes opiniones. Unos dirían que el lugar en el menú para especificas estas opciones, se encontraría en las <strong>preferencias del sistema</strong> por ejemplo, mientras que otros posiblemente opinarían que aunque estarían de acuerdo en ello, lo conveniente es resumirlo dentro de la <strong>gestión de energía</strong> (administración del consumo de energía).</p>
 
-<p>It’s good to remember that Grub configuration file though, resides on the /boot/default directory.</p>
+<p>En mi caso, fue la última de estas opciones en las que pensé que cualquier cambio de las configuraciones tomarían lugar.</p>
 
-<p>With sudo privileges, access the file at /boot/default/grub first.</p>
+<p>Pero lo mismo da, en estos casos, porque cuando se han implementado ciertas funciones, la opinión de los usuarios, a no ser aquellas que en esos casos donde por petición popular de la mayoría, logren en acordar y convencer a los desarrolladores en implementarlas, casi siempre no suscitan el interés que otras funciones conllevan. Y por lo tanto estas otras opciones gráficas dejan de ser modificadas.</p>
 
-<p>Therein, and lying at the bottom of the configuration file, one can find the:</p>
+<p>También hay que tener en cuenta que muchos otros usuarios hispano-parlantes, (o debería decir la gran mayoría), se adaptan a estas condiciones, incluso en aquellos casos donde estas funciones interceden en el uso diario.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  # Uncomment to make GRUB remember the last selection. This requires to
-  # set 'GRUB_DEFAULT=saved' above.
-  #GRUB_SAVEDEFAULT="true"
-</code></pre></div></div>
+<p>Este es el caso de algo tan sencillo como el <em>reposo automático de la pantalla</em> que se experimenta en Manjaro.</p>
 
-<p>One could uncomment the GRUB_SAVEDEFAULT=”true” so the grub configuration file ‘remembers’ the selection.</p>
+<p>Por norma, el tiempo que transcurre antes que el sistema cierra la sesión, o por lo menos en Manjaro KDE, es de unos cinco minutos.</p>
 
-<p>Furthermore, and right on the top of the file the default chosen selection can be specified by modifying the value of 0:</p>
+<p>Pensé en realizar el cambio desde un principio a través de la ya mencionada <strong>administración del consumo de energía</strong> o la <strong>gestión de energía</strong>, pero esta función del sistema no tiene nada que ver con ello.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  # GRUB boot loader configuration
-  GRUB_DEFAULT=0
-</code></pre></div></div>
+<p>Este reposo de la pantalla, se controla desde <strong>Bloqueo de pantalla</strong> o <strong>Screen locking</strong>.</p>
 
-<p>To a 2 or 3 for the desired kernel. Which in my case, and if the LTS kernel is to be loaded instead, matched the kernel itself and the fallback for it.</p>
+<p>Primero antes que todo, y desde la ventana principal de las <strong>Preferencias del sistema</strong>, se le da clic al ya mencionado <strong>Comportamiento del escritorio</strong> (que aparece bajo <strong>Espacio de trabajo</strong>).</p>
 
-<p>By going this route, it no longer is necessary in specifying during the system startup, the desired kernel that one chooses to be loaded.</p>
+<p><img src="/images/comportamiento-del-escritorio-manjaro.png" alt="comportamiento-del-escritorio" /></p>
 
-<p>Remember after making any changes to grub, to update the configuration file by running:</p>
+<p>Acto seguido a ello y a mano izquierda, se le da clic a <strong>Bloqueo de pantalla</strong>, que una vez abre a mano derecha las opciones de configuración bajo el título de <strong>Tiempos de espera del bloqueo de pantalla</strong> y como se muestra en la siguiente imagen que muestra el tabulador de activación, el período de tiempo en minutos que se necesita modificar.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> grub-mkconfig -o /boot/grub/grub.cfg
-</code></pre></div></div>
+<p>El valor pre-configurado son de unos 5 minutos. Se puede especificar el tiempo que uno estime apropiado.</p>
 
-<p>For more info about this, visit the wiki:</p>
+<p><img src="/images/bloqueo-de-pantalla-screen-locking-manjaro.png" alt="bloqueo-de-pantalla-en-manjaro" /></p>
 
-<p><a href="https://wiki.archlinux.org/index.php/GRUB/Tips_and_tricks" target="_blank">GRUB/Tips and tricks</a></p>
 
 
         
@@ -221,7 +214,7 @@
 
 
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-01-20T07:38:47-06:00">January 20, 2018</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-02-24T12:45:58-06:00">February 24, 2017</time></p>
         
       </footer>
 
@@ -230,11 +223,11 @@
       
   <nav class="pagination">
     
-      <a href="https://bindkey.github.io/udisks2-udiskie-fares-better-than-ntfs-3g/" class="pagination--pager" title="Udisks2 Udiskie Fares Better Than Ntfs 3g
+      <a href="https://bindkey.github.io/turn-off-manjaro-kde-splash-screen-if-on-ssd/" class="pagination--pager" title="Turn Off Manjaro Kde Splash Screen if on Ssd
 ">Previous</a>
     
     
-      <a href="https://bindkey.github.io/antergos-keyboard-selection-during-installation/" class="pagination--pager" title="Antergos Keyboard Selection During Installation
+      <a href="https://bindkey.github.io/configurar-el-idioma-en-manjaro-kde/" class="pagination--pager" title="Configurar El Idioma en Manjaro Kde
 ">Next</a>
     
   </nav>
@@ -273,6 +266,34 @@
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">One of the drawbacks during the installation of Antergos Linux was in identifying the keyboard layout option that was previously selected during the media in...</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="https://bindkey.github.io/antergos-grub-selection/" rel="permalink">Antergos Grub Selection
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">During the installation of Antergos, there was an option to install the Linux LTS kernel along with the default latest stable version.
+
+</p>
   </article>
 </div>
         
@@ -330,35 +351,8 @@
   </article>
 </div>
         
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="https://bindkey.github.io/manjaro-kde-plasma-dolphin-mtp-cant-open-file/" rel="permalink">Manjaro Kde Plasma Dolphin Mtp Cant Open File
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  2 minute read
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">MTP implementation runs on most desktop environments without a problem. Except on KDE where it has had several problems in identifying and initializing a sim...</p>
-  </article>
-</div>
-        
       </div>
     </div>
-  
   
 </div>
 

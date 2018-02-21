@@ -1,0 +1,238 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.10.0 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Turn Off Manjaro Kde Splash Screen if on Ssd - El blog del tecnólogo</title>
+<meta name="description" content="Posicionado desde hace meses en el quinto escalafón de la lista de las distribuciones basadas en Linux, la distribución Manjaro , basada en la impresionante distribución Arch Linux, y que hace uso del magnífico sistema de administración de paquetes Pacman de este último, emplea los últimos e innovadores temas de interfaz gráficos en muchas de las ediciones, tanto de la comunidad, como aquellas que son aprobadas oficialmente. 1">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="El blog del tecnólogo">
+<meta property="og:title" content="Turn Off Manjaro Kde Splash Screen if on Ssd">
+<meta property="og:url" content="https://bindkey.github.io/turn-off-manjaro-kde-splash-screen-if-on-ssd/">
+
+
+  <meta property="og:description" content="Posicionado desde hace meses en el quinto escalafón de la lista de las distribuciones basadas en Linux, la distribución Manjaro , basada en la impresionante distribución Arch Linux, y que hace uso del magnífico sistema de administración de paquetes Pacman de este último, emplea los últimos e innovadores temas de interfaz gráficos en muchas de las ediciones, tanto de la comunidad, como aquellas que son aprobadas oficialmente. 1">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2017-02-15T03:02:19-06:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://bindkey.github.io/turn-off-manjaro-kde-splash-screen-if-on-ssd/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Carlos",
+      "url": "https://bindkey.github.io",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="https://bindkey.github.io/feed.xml" type="application/atom+xml" rel="alternate" title="El blog del tecnólogo Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="https://bindkey.github.io/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--page">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="https://bindkey.github.io/">El blog del tecnólogo</a>
+        <ul class="visible-links">
+          
+            
+            <li class="masthead__menu-item">
+              <a href="https://bindkey.github.io/about/" >About</a>
+            </li>
+          
+        </ul>
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    <div class="initial-content">
+      <p>Posicionado desde hace meses en el quinto escalafón de la lista de las distribuciones basadas en <a href="http://distrowatch.com/" target="_blank">Linux</a>, la distribución <a href="https://manjaro.org/" target="_blank">Manjaro </a>, basada en la impresionante distribución <a href="http://archlinux.org/" target="_blank">Arch Linux</a>, y que hace uso del magnífico sistema de administración de paquetes <strong>Pacman</strong> de este último, emplea los últimos e innovadores temas de interfaz gráficos en muchas de las ediciones, tanto de la comunidad, como aquellas que son aprobadas oficialmente. <a href="#man"><sup id="manref">1</sup></a></p>
+
+<p>No tuve problema alguno con la instalación del sistema operativo. Todo parecía funcionar sin problemas. La tarjeta gráfica del ordenador se había identificado apropiadamente durante el proceso de instalación, al igual que la tarjeta inalámbrica que permite el acceso al Internet para la continuación de cualquier actualización que se necesitaría llevar a cabo más tarde.</p>
+
+<p>El mayor problema recaía en el tiempo que tomaba antes que el escritorio gráfico de este sistema operativo estuviera disponible.</p>
+
+<p>Después de reinicializar las sesiones en varias ocasiones, me di cuenta que este lapso que estaba experimentando, no era algo necesariamente deseable, y peor aún, porque muchas veces fallaba por completo en cargar el entorno gráfico KDE, mientras que el resto del sistema estaba simplemente congelado. Esto imposibilitaba por ende, el acceso a la línea de intérprete de comandos, al igual que a cualquier operación de revisión de errores. Bajo estas condiciones, el sistema entero se paralizaba y por consiguiente era algo inaceptable.</p>
+
+<p>Aunque el origen de este problema no era tan sencillo de rastrear, me di cuenta que ‘startx’ podía ser el causante. Una búsqueda rápida en Google dio como resultados en su primer hit de búsqueda a una pregunta similar titulada: <em>Plasma desktop 5 boots very slowly</em> que había sido hecha en el boletín de Arch Linux.</p>
+
+<p>La pregunta del op era la siguiente:</p>
+
+<blockquote>
+<p>is there any way to debug Plasma-desktop 5 loading process to figure out why it is slow?</p>
+</blockquote>
+
+<p>a lo que una respuesta continuaba después que decía:</p>
+
+<blockquote>
+<blockquote>
+<p>if on ssd, it’s better to turn off splash screen. <a href="#ssd"><sup id="ssdref">2</sup></a></p>
+</blockquote>
+</blockquote>
+
+<p>Y eso era exactamente lo que estaba ocurriendo, o por lo menos en mi caso.</p>
+
+<p>Después de ello y una vez en el menú gráfico del sistema, se selecciona las configuraciones del sistema o <em>settings</em> . Una vez allí y bajo el tabulador <em>Appearance</em> se selecciona <em>Workspace Theme</em>.</p>
+
+<p><img src="/images/manjaro-workspace.png" alt="manjaro-workspace" />
+<img src="/images/tema-del-espacio-de-trabajo.png" alt="manjaro-espacio-de-trabajo" /></p>
+
+<p>Una vez que se seleccione el <em>Tema</em> y como se mostrará en la siguiente figura, se debe especificar que <em>None</em> o <em>ninguno</em>.</p>
+
+<p><img src="/images/manjaro-splash.png" alt="manjaro-splash" />
+<img src="/images/no-splash-en-manjaro-kde.png" alt="manjaro-no-splash" /></p>
+
+<p><strong>Footnotes</strong></p>
+
+<ol>
+<li><p><a name="man"></a><a href="https://manjaro.org/get-manjaro/" target="_blank">Lanzamientos oficiales de Manjaro</a><a href="#manref">&crarr;</a></p></li>
+
+<li><p><a name="ssd"></a>Sugerencia de un usuario en ajustar el valor pre-configurado del espacio de trabajo. Para más información acerca de ello visite el siguiente sitio que ofrece más detalles acerca de la conversación <a href="https://bbs.archlinux.org/viewtopic.php?pid=1557789#p1557789" target="_blank" title="turn off splash if on ssd">turn off splash if on ssd</a> <a href="#ssdref"> ↩︎</a></p></li>
+</ol>
+
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><input type="text" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    <div id="results" class="results"></div></div>
+      </div>
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+    
+    
+    <li><a href="https://bindkey.github.io/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2018 Carlos. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="https://bindkey.github.io/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+
+
+
+<script src="https://bindkey.github.io/assets/js/lunr/lunr.min.js"></script>
+<script src="https://bindkey.github.io/assets/js/lunr/lunr-store.js"></script>
+<script src="https://bindkey.github.io/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+  </body>
+</html>

@@ -9,38 +9,38 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Antergos Grub Selection - El blog del tecnólogo</title>
-<meta name="description" content="During the installation of Antergos, there was an option to install the Linux LTS kernel along with the default latest stable version.">
+<!-- begin _includes/seo.html --><title>Reemplazar Con Vim. Reemplazos de minúsculas con mayúsculas - El blog del tecnólogo</title>
+<meta name="description" content="O como se dice en Inglés: capitalization, se puede lograr fácilmente en vim  mediante el empleo de mayúsculas al comienzo de oraciones a través del uso de una expresión regular o regex, sin la necesidad de utilizar algún que otro script (que puede causar efectos secundarios en el funcionamiento), para lograr el reemplazo de las minúsculas.">
 
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="El blog del tecnólogo">
-<meta property="og:title" content="Antergos Grub Selection">
-<meta property="og:url" content="https://bindkey.github.io/antergos-grub-selection/">
+<meta property="og:title" content="Reemplazar Con Vim. Reemplazos de minúsculas con mayúsculas">
+<meta property="og:url" content="https://bindkey.github.io/reemplazar-con-vim/">
 
 
-  <meta property="og:description" content="During the installation of Antergos, there was an option to install the Linux LTS kernel along with the default latest stable version.">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2018-01-20T07:38:47-06:00">
+  <meta property="og:description" content="O como se dice en Inglés: capitalization, se puede lograr fácilmente en vim  mediante el empleo de mayúsculas al comienzo de oraciones a través del uso de una expresión regular o regex, sin la necesidad de utilizar algún que otro script (que puede causar efectos secundarios en el funcionamiento), para lograr el reemplazo de las minúsculas.">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2017-02-08T12:48:53-06:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="https://bindkey.github.io/antergos-grub-selection/">
+
+<link rel="canonical" href="https://bindkey.github.io/reemplazar-con-vim/">
 
 
 
@@ -149,15 +149,15 @@
   
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Antergos Grub Selection">
-    <meta itemprop="description" content="During the installation of Antergos, there was an option to install the Linux LTS kernel along with the default latest stable version.">
-    <meta itemprop="datePublished" content="January 20, 2018">
+    <meta itemprop="headline" content="Reemplazar Con Vim. Reemplazos de minúsculas con mayúsculas">
+    <meta itemprop="description" content="O como se dice en Inglés: capitalization, se puede lograr fácilmente en vim  mediante el empleo de mayúsculas al comienzo de oraciones a través del uso de una expresión regular o regex, sin la necesidad de utilizar algún que otro script (que puede causar efectos secundarios en el funcionamiento), para lograr el reemplazo de las minúsculas.">
+    <meta itemprop="datePublished" content="February 08, 2017">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 class="page__title" itemprop="headline">Antergos Grub Selection
+          <h1 class="page__title" itemprop="headline">Reemplazar Con Vim. Reemplazos de minúsculas con mayúsculas
 </h1>
           
             <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
@@ -173,43 +173,55 @@
 
       <section class="page__content" itemprop="text">
         
-        <p>During the installation of Antergos, there was an option to install the Linux LTS kernel along with the default latest stable version.</p>
+        <p>O como se dice en Inglés: <em>capitalization</em>, se puede lograr fácilmente en <a href="http://www.vim.org/" target="_blank">vim </a> mediante el empleo de mayúsculas al comienzo de oraciones a través del uso de una expresión regular o regex, sin la necesidad de utilizar algún que otro script (que puede causar efectos secundarios en el funcionamiento), para lograr el reemplazo de las minúsculas.</p>
 
-<p>Even though it was installed appropriately, the option to select the other kernel, could not be seen from the Grub selection window.</p>
+<p>En el website de programadores de superuser.com, <a href="http://superuser.com/questions/737130/automatically-capitalize-the-first-letter-of-sentence-in-vim" target="_blank">superuser.com/questions/737130/automatically-capitalize-the-first-letter-of-sentence-in-vim</a> se hace esta misma pregunta para lograr el reemplazo automático de minúsculas por mayúsculas al principio de cada oración.</p>
 
-<p>this is even after running the usual mkinitcpio -p <linux kernel=""> that loads the modules and other dependencies accordingly.</linux></p>
+<p>Una de las repuestas <a href="#script"><sup id="fnref">1</sup></a> hace énfasis de esto mediante la adición de un unas líneas de script o programa de ejecución.</p>
 
-<p>It’s good to remember that Grub configuration file though, resides on the /boot/default directory.</p>
+<p>El problema que esto conlleva, y como uno de los usuarios comentó,</p>
 
-<p>With sudo privileges, access the file at /boot/default/grub first.</p>
+<blockquote>
+<p>The only problem is this script seems to add a noticeable lag when typing</p>
+</blockquote>
 
-<p>Therein, and lying at the bottom of the configuration file, one can find the:</p>
+<p>Es que mientras más extenso sea el documento, más se experimenta el lag o el retraso en el ingreso de caracteres. Es decir, la óptima funcionalidad se pierde parcialmente. Solo es necesario en tener un documento que comprenda un número de ciento y algo líneas, (y esto es sin contar que haya encima de ello algunas que otras líneas de código), para notar la diferencia.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  # Uncomment to make GRUB remember the last selection. This requires to
-  # set 'GRUB_DEFAULT=saved' above.
-  #GRUB_SAVEDEFAULT="true"
-</code></pre></div></div>
+<p>Considero que sin tanta complicación que más tarde nos puede afectar, la mínima utilización de un reemplazo de caracteres mediante una expresión regular, tuviese mejores resultados.</p>
 
-<p>One could uncomment the GRUB_SAVEDEFAULT=”true” so the grub configuration file ‘remembers’ the selection.</p>
+<p>Para cambiar la minúscula por mayúscula sería necesario entonces algo como:</p>
 
-<p>Furthermore, and right on the top of the file the default chosen selection can be specified by modifying the value of 0:</p>
+<pre><code> $ :%s/\.[a-z]/\U&amp;/g
+</code></pre>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  # GRUB boot loader configuration
-  GRUB_DEFAULT=0
-</code></pre></div></div>
+<p>e. g.,  si el espacio después de la puntuación fue ingresado, no se te olvide cambiar el código encima con el espacio sobrante correspondiente, tal como</p>
 
-<p>To a 2 or 3 for the desired kernel. Which in my case, and if the LTS kernel is to be loaded instead, matched the kernel itself and the fallback for it.</p>
+<pre><code> $ :%s/\. [a-z]/\U&amp;/g
+</code></pre>
 
-<p>By going this route, it no longer is necessary in specifying during the system startup, the desired kernel that one chooses to be loaded.</p>
+<p>y para lograr el intercambio al comienzo de cada línea, entonces</p>
 
-<p>Remember after making any changes to grub, to update the configuration file by running:</p>
+<pre><code> $ :%s/^[a-z]/\U&amp;/g
+</code></pre>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> grub-mkconfig -o /boot/grub/grub.cfg
-</code></pre></div></div>
+<p>reemplaza la minúscula desde el comienzo.</p>
 
-<p>For more info about this, visit the wiki:</p>
+<p>Para reemplazar múltiples patrones de búsqueda, se debe emplear el sufijo <code>e</code> después de la expresión regular con la que se modificaría la búsqueda,  separado de una barra vertical <code>|</code> que separe los dos grupos, es decir:</p>
 
-<p><a href="https://wiki.archlinux.org/index.php/GRUB/Tips_and_tricks" target="_blank">GRUB/Tips and tricks</a></p>
+<pre><code> $ :%s/^[a-z]/\U&amp;/ge | %s/\. [a-z]/\U&amp;/ge
+</code></pre>
+
+<p>Otras de las maneras de emplear esta <em>expresión regular</em> es mediante la substitución de <code>[a-z]</code> por <code>\w</code>. una búsqueda rápida en <code>:help</code> nos indica que <code>\w</code> equivale a <code>[0-9A-Za-z]</code></p>
+
+<p>por lo tanto se pudiese emplear algo tal como</p>
+
+<pre><code> $ :%s/^\w/\U&amp;/ge | %s/\. \w/\U&amp;/ge 
+</code></pre>
+
+<p><strong>Footnotes</strong></p>
+
+<p><a href="#fnref"> ↩︎</a>
+   <a name="script"> </a>Respuesta de usuario de vim para el empleo de un script que reemplace minúscula por mayúscula pero que causa lag en documentos <a href="http://superuser.com/a/737155">http://superuser.com/a/737155</a></p>
 
 
         
@@ -221,7 +233,7 @@
 
 
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-01-20T07:38:47-06:00">January 20, 2018</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-02-08T12:48:53-06:00">February 08, 2017</time></p>
         
       </footer>
 
@@ -230,11 +242,10 @@
       
   <nav class="pagination">
     
-      <a href="https://bindkey.github.io/udisks2-udiskie-fares-better-than-ntfs-3g/" class="pagination--pager" title="Udisks2 Udiskie Fares Better Than Ntfs 3g
-">Previous</a>
+      <a href="#" class="pagination--pager disabled">Previous</a>
     
     
-      <a href="https://bindkey.github.io/antergos-keyboard-selection-during-installation/" class="pagination--pager" title="Antergos Keyboard Selection During Installation
+      <a href="https://bindkey.github.io/reemplazo-de-minusculas-por-mayusculas-con-emacs/" class="pagination--pager" title="Reemplazo De Minúsculas Con Mayúsculas Con Emacs
 ">Next</a>
     
   </nav>
@@ -273,6 +284,34 @@
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">One of the drawbacks during the installation of Antergos Linux was in identifying the keyboard layout option that was previously selected during the media in...</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="https://bindkey.github.io/antergos-grub-selection/" rel="permalink">Antergos Grub Selection
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">During the installation of Antergos, there was an option to install the Linux LTS kernel along with the default latest stable version.
+
+</p>
   </article>
 </div>
         
@@ -330,35 +369,8 @@
   </article>
 </div>
         
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="https://bindkey.github.io/manjaro-kde-plasma-dolphin-mtp-cant-open-file/" rel="permalink">Manjaro Kde Plasma Dolphin Mtp Cant Open File
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  2 minute read
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">MTP implementation runs on most desktop environments without a problem. Except on KDE where it has had several problems in identifying and initializing a sim...</p>
-  </article>
-</div>
-        
       </div>
     </div>
-  
   
 </div>
 

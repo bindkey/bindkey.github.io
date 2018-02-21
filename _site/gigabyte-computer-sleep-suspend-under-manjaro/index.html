@@ -9,38 +9,38 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Antergos Grub Selection - El blog del tecnólogo</title>
-<meta name="description" content="During the installation of Antergos, there was an option to install the Linux LTS kernel along with the default latest stable version.">
+<!-- begin _includes/seo.html --><title>Gigabyte Computer Sleep Suspend Under Manjaro - El blog del tecnólogo</title>
+<meta name="description" content="I had configured Manjaro under an old system and was never pressed with the issue of suspend on that old hardware.">
 
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="El blog del tecnólogo">
-<meta property="og:title" content="Antergos Grub Selection">
-<meta property="og:url" content="https://bindkey.github.io/antergos-grub-selection/">
+<meta property="og:title" content="Gigabyte Computer Sleep Suspend Under Manjaro">
+<meta property="og:url" content="https://bindkey.github.io/gigabyte-computer-sleep-suspend-under-manjaro/">
 
 
-  <meta property="og:description" content="During the installation of Antergos, there was an option to install the Linux LTS kernel along with the default latest stable version.">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2018-01-20T07:38:47-06:00">
+  <meta property="og:description" content="I had configured Manjaro under an old system and was never pressed with the issue of suspend on that old hardware.">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2017-05-22T12:08:23-05:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="https://bindkey.github.io/antergos-grub-selection/">
+
+<link rel="canonical" href="https://bindkey.github.io/gigabyte-computer-sleep-suspend-under-manjaro/">
 
 
 
@@ -149,15 +149,15 @@
   
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Antergos Grub Selection">
-    <meta itemprop="description" content="During the installation of Antergos, there was an option to install the Linux LTS kernel along with the default latest stable version.">
-    <meta itemprop="datePublished" content="January 20, 2018">
+    <meta itemprop="headline" content="Gigabyte Computer Sleep Suspend Under Manjaro">
+    <meta itemprop="description" content="I had configured Manjaro under an old system and was never pressed with the issue of suspend on that old hardware.">
+    <meta itemprop="datePublished" content="May 22, 2017">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 class="page__title" itemprop="headline">Antergos Grub Selection
+          <h1 class="page__title" itemprop="headline">Gigabyte Computer Sleep Suspend Under Manjaro
 </h1>
           
             <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
@@ -173,43 +173,41 @@
 
       <section class="page__content" itemprop="text">
         
-        <p>During the installation of Antergos, there was an option to install the Linux LTS kernel along with the default latest stable version.</p>
+        <p>I had configured Manjaro under an old system and was never pressed with the issue of suspend on that old hardware.</p>
 
-<p>Even though it was installed appropriately, the option to select the other kernel, could not be seen from the Grub selection window.</p>
+<p>When the Gigabyte computer was finally up and running, I noticed that the system was unable to suspend or sleep.</p>
 
-<p>this is even after running the usual mkinitcpio -p <linux kernel=""> that loads the modules and other dependencies accordingly.</linux></p>
+<p>After failing to find a quick solution to the problem on the archlinux forums, I came across this post from the Manjaro site: <a href="https://forum.manjaro.org/t/manjaro-not-waking-from-suspend-or-sleep/492" target="_blank">Manjaro not waking from suspend or sleep</a> and I almost knew  - not right away - that the discussion was the underlying cause of the problems I was experiencing.</p>
 
-<p>It’s good to remember that Grub configuration file though, resides on the /boot/default directory.</p>
+<p>One of the users, by the handle of <em>artoo</em> offered to downgrade the kernel:</p>
 
-<p>With sudo privileges, access the file at /boot/default/grub first.</p>
+<p><img src="/images/2017-05-22-artoo-downgrade-suggestion.png" alt="" /></p>
 
-<p>Therein, and lying at the bottom of the configuration file, one can find the:</p>
+<p>The kernel number and the year of the post were no longer relevant.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  # Uncomment to make GRUB remember the last selection. This requires to
-  # set 'GRUB_DEFAULT=saved' above.
-  #GRUB_SAVEDEFAULT="true"
-</code></pre></div></div>
+<p>But instead of the solution offered by the user <strong>artoo</strong> in downgrading, I chose to upgrade instead, especially after the reply by another user who said that:</p>
 
-<p>One could uncomment the GRUB_SAVEDEFAULT=”true” so the grub configuration file ‘remembers’ the selection.</p>
+<blockquote>
+<p>Its likeley the problem with hooks in mkinitcpio.conf and users having to
+manually mkinitcpio -p linux. Its a weekeley problem on irc and this fixes most
+oftenly.</p>
+</blockquote>
 
-<p>Furthermore, and right on the top of the file the default chosen selection can be specified by modifying the value of 0:</p>
+<p>And</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  # GRUB boot loader configuration
-  GRUB_DEFAULT=0
-</code></pre></div></div>
+<blockquote>
+<p>Its very likely I assumed the initramfs get rebuild one way or another.</p>
+</blockquote>
 
-<p>To a 2 or 3 for the desired kernel. Which in my case, and if the LTS kernel is to be loaded instead, matched the kernel itself and the fallback for it.</p>
+<p><img src="/images/2017-05-22-ivan-reply-mkinitcpiio.png" alt="" /></p>
 
-<p>By going this route, it no longer is necessary in specifying during the system startup, the desired kernel that one chooses to be loaded.</p>
+<p>And the anecdote example almost a month later by another user in which he said that</p>
 
-<p>Remember after making any changes to grub, to update the configuration file by running:</p>
+<blockquote>
+<p>This time execution of mkinitcpio -p linux46 turns out to be sufficient</p>
+</blockquote>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> grub-mkconfig -o /boot/grub/grub.cfg
-</code></pre></div></div>
-
-<p>For more info about this, visit the wiki:</p>
-
-<p><a href="https://wiki.archlinux.org/index.php/GRUB/Tips_and_tricks" target="_blank">GRUB/Tips and tricks</a></p>
+<p><img src="./Gigabyte computer sleep suspend under Manjaro · blog del tecnólogo_files/2017-05-22-fordprefect-suggestion-mkinitcpio.png" alt="" /></p>
 
 
         
@@ -221,7 +219,7 @@
 
 
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-01-20T07:38:47-06:00">January 20, 2018</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-05-22T12:08:23-05:00">May 22, 2017</time></p>
         
       </footer>
 
@@ -230,11 +228,11 @@
       
   <nav class="pagination">
     
-      <a href="https://bindkey.github.io/udisks2-udiskie-fares-better-than-ntfs-3g/" class="pagination--pager" title="Udisks2 Udiskie Fares Better Than Ntfs 3g
+      <a href="https://bindkey.github.io/firefox-problem-with-xclip/" class="pagination--pager" title="Firefox Problem With Xclip
 ">Previous</a>
     
     
-      <a href="https://bindkey.github.io/antergos-keyboard-selection-during-installation/" class="pagination--pager" title="Antergos Keyboard Selection During Installation
+      <a href="https://bindkey.github.io/gcc-multilib-in-conflict-with-gcc-during-manjaro-upgrade/" class="pagination--pager" title="Gcc Multilib in Conflict With Gcc During Manjaro Upgrade
 ">Next</a>
     
   </nav>
@@ -273,6 +271,34 @@
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">One of the drawbacks during the installation of Antergos Linux was in identifying the keyboard layout option that was previously selected during the media in...</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="https://bindkey.github.io/antergos-grub-selection/" rel="permalink">Antergos Grub Selection
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">During the installation of Antergos, there was an option to install the Linux LTS kernel along with the default latest stable version.
+
+</p>
   </article>
 </div>
         
@@ -330,35 +356,8 @@
   </article>
 </div>
         
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="https://bindkey.github.io/manjaro-kde-plasma-dolphin-mtp-cant-open-file/" rel="permalink">Manjaro Kde Plasma Dolphin Mtp Cant Open File
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  2 minute read
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">MTP implementation runs on most desktop environments without a problem. Except on KDE where it has had several problems in identifying and initializing a sim...</p>
-  </article>
-</div>
-        
       </div>
     </div>
-  
   
 </div>
 
