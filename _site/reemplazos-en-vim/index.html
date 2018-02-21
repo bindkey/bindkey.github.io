@@ -1,0 +1,278 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.10.0 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Reemplazos en Vim - El blog del tecnólogo</title>
+<meta name="description" content="Estos son algunos de los reemplazos que se pudieran realizar en vim:">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="El blog del tecnólogo">
+<meta property="og:title" content="Reemplazos en Vim">
+<meta property="og:url" content="https://bindkey.github.io/reemplazos-en-vim/">
+
+
+  <meta property="og:description" content="Estos son algunos de los reemplazos que se pudieran realizar en vim:">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2016-11-07T13:42:55-06:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://bindkey.github.io/reemplazos-en-vim/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Carlos",
+      "url": "https://bindkey.github.io",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="https://bindkey.github.io/feed.xml" type="application/atom+xml" rel="alternate" title="El blog del tecnólogo Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="https://bindkey.github.io/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--page">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="https://bindkey.github.io/">El blog del tecnólogo</a>
+        <ul class="visible-links">
+          
+            
+            <li class="masthead__menu-item">
+              <a href="https://bindkey.github.io/about/" >About</a>
+            </li>
+          
+        </ul>
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    <div class="initial-content">
+      <p>Estos son algunos de los reemplazos que se pudieran realizar en vim:</p>
+
+<pre><code>:s/\zs/\r/g
+</code></pre>
+
+<p>will have this string of characters: abcdefghi</p>
+
+<p>tendrá esta cadena de caracteres: abcdefghi</p>
+
+<p><strong>result</strong>:</p>
+
+<p>a<br />
+b<br />
+c<br />
+d<br />
+e<br />
+f<br />
+g<br />
+h<br />
+i</p>
+
+<p>Por otra parte la siguiente ejecución:</p>
+
+<pre><code>:s/\s/\r/g 
+</code></pre>
+
+<p>will have</p>
+
+<p>esto es una prueba</p>
+
+<p><strong>result</strong>:</p>
+
+<p>esto<br />
+es<br />
+una<br />
+prueba</p>
+
+<p>and <code>:s/\n//g</code></p>
+
+<p>will have something like</p>
+
+<p>a<br />
+b<br />
+c<br />
+d</p>
+
+<p><strong>results</strong>:</p>
+
+<p>abcde</p>
+
+<pre><code>:s/\n/ /g
+</code></pre>
+
+<p>will have something like</p>
+
+<p>esto<br />
+es<br />
+una<br />
+prueba</p>
+
+<p><strong>result</strong>: esto es una prueba</p>
+
+<p>por supuesto, se puede ver que en algunos casos se utiliza <code>\n</code>, mientras que en otros se utiliza <code>\r</code>, es necesario recordar que en cada reemplazo y substitución en vim, se logra mediante <code>:s/texto para reemplazar/substituir con</code>.</p>
+
+<p>Primero antes que todo el delimitador de barra oblicua <code>/</code> es la separación de lo que se quiere modificar con lo que se modificaría.</p>
+
+<p>Es decir, por ejemplo, donde <code>texto para reemplazar</code> es la expresión regular que se desea cambiar, o los caracteres del texto que se desean modificar, mientras que <code>substituir con</code> es el nuevo ingreso que tomará lugar.</p>
+
+<p>En este caso, para entender este procedimiento, no hay mejor ayuda en vim, que ir directo a la documentación con <code>:help \n</code> o mediante <code>:h \n</code> para abreviar, y también entender el por qué difiere de <code>:help \r</code></p>
+
+<p>Creo que una de las mejores respuestas sobre esto, se encuentra en <a href="http://stackoverflow.com/a/18961239">http://stackoverflow.com/a/18961239</a> que especifica que “in the syntax <code>s/foo/bar</code>, <code>\r</code> and <code>\n</code> have different meanings depending on context.</p>
+
+<p>En nuestro caso sería <code>s/texto para reemplazar/substituir con</code>.</p>
+
+<p>Por lo tanto esto equivaldría a:</p>
+
+<p>En el caso de <code>texto para reemplazar</code>, es decir, <code>s/&lt;texto para reemplazar&gt;</code> antes del segundo delimitador <code>/</code>:<br />
+<code>\n</code> sería una newline  o un salto de línea.<br />
+<code>\r</code> en este caso sería CR que es la tecla <code>Enter</code>, tecla de retorno o de regreso.</p>
+
+<p>En el caso de <code>substituir con</code>, es decir, <code>s/&lt;texto para reemplazar&gt;/&lt;substituir con&gt;</code>, o los caracteres que se encuentren después de la segunda barra <code>/</code>:<br />
+<code>\n</code> seria un octeto nulo<br />
+<code>\r</code> en este caso es una <code>newline</code> o un salto de línea.</p>
+
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><input type="text" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    <div id="results" class="results"></div></div>
+      </div>
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+    
+    
+    <li><a href="https://bindkey.github.io/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2018 Carlos. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="https://bindkey.github.io/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+
+
+
+<script src="https://bindkey.github.io/assets/js/lunr/lunr.min.js"></script>
+<script src="https://bindkey.github.io/assets/js/lunr/lunr-store.js"></script>
+<script src="https://bindkey.github.io/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+  </body>
+</html>

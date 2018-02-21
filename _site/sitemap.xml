@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>https://bindkey.github.io/cambia-tu-contrasena-en-gmail-y-google/</loc>
+<lastmod>2016-08-02T14:48:19-05:00</lastmod>
+</url>
+<url>
+<loc>https://bindkey.github.io/circulos-en-gimp/</loc>
+<lastmod>2016-08-03T00:00:00-05:00</lastmod>
+</url>
+<url>
+<loc>https://bindkey.github.io/git-in-six-hundred-words-by-mary-rose-cook/</loc>
+<lastmod>2016-08-03T00:00:00-05:00</lastmod>
+</url>
+<url>
+<loc>https://bindkey.github.io/flechas-en-gimp/</loc>
+<lastmod>2016-08-10T14:16:59-05:00</lastmod>
+</url>
+<url>
+<loc>https://bindkey.github.io/reemplazos-en-vim/</loc>
+<lastmod>2016-11-07T13:42:55-06:00</lastmod>
+</url>
+<url>
+<loc>https://bindkey.github.io/modificar-mapa-del-teclado-con-emacs-y-vim/</loc>
+<lastmod>2016-11-21T13:40:45-06:00</lastmod>
+</url>
+<url>
 <loc>https://bindkey.github.io/reemplazar-con-vim/</loc>
 <lastmod>2017-02-08T12:48:53-06:00</lastmod>
 </url>
@@ -135,5 +159,8 @@
 </url>
 <url>
 <loc>https://bindkey.github.io/page6/</loc>
+</url>
+<url>
+<loc>https://bindkey.github.io/page7/</loc>
 </url>
 </urlset>
