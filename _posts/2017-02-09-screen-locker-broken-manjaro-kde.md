@@ -1,5 +1,5 @@
 ---
-layout : page
+layout : post
 title : "Screen Locker Broken Manjaro Kde"
 date : "2017-12-09T13:58:20-05:00"
 ---
