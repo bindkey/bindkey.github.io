@@ -1,5 +1,5 @@
 ---
-layout : page
+layout : post
 title : "Reemplazos en Vim"
 date : "2016-11-07T14:42:55-05:00"
 ---
