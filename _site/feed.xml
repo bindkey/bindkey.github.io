@@ -1,4 +1,21 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.2">Jekyll</generator><link href="https://bindkey.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://bindkey.github.io/" rel="alternate" type="text/html" /><updated>2018-02-22T01:46:32-06:00</updated><id>https://bindkey.github.io/</id><title type="html">El blog del tecnólogo</title><subtitle>An amazing website.</subtitle><entry><title type="html">Antergos Keyboard Selection During Installation</title><link href="https://bindkey.github.io/antergos-keyboard-selection-during-installation/" rel="alternate" type="text/html" title="Antergos Keyboard Selection During Installation" /><published>2018-01-27T07:49:17-06:00</published><updated>2018-01-27T07:49:17-06:00</updated><id>https://bindkey.github.io/antergos-keyboard-selection-during-installation</id><content type="html" xml:base="https://bindkey.github.io/antergos-keyboard-selection-during-installation/">&lt;p&gt;One of the drawbacks during the installation of &lt;a href=&quot;https://antergos.com&quot; target=&quot;_blank&quot;&gt;Antergos Linux&lt;/a&gt; was in identifying the keyboard layout option that was previously selected during the media installation.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.2">Jekyll</generator><link href="https://bindkey.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://bindkey.github.io/" rel="alternate" type="text/html" /><updated>2018-02-23T02:03:40-06:00</updated><id>https://bindkey.github.io/</id><title type="html">El blog del tecnólogo</title><subtitle>An amazing website.</subtitle><entry><title type="html">Libzita Conflicting</title><link href="https://bindkey.github.io/libzita-conflicting/" rel="alternate" type="text/html" title="Libzita Conflicting" /><published>2018-02-23T00:00:00-06:00</published><updated>2018-02-23T00:00:00-06:00</updated><id>https://bindkey.github.io/libzita-conflicting</id><content type="html" xml:base="https://bindkey.github.io/libzita-conflicting/">&lt;p&gt;On the most recent upgrade for Arch, some file conflicts prevented the upgrades from going through.&lt;/p&gt;
+
+&lt;p&gt;The message was:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; zita-resampler: libzita-resampler.so.1 already exits in filesystem
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Which by looking at the directory &lt;code class=&quot;highlighter-rouge&quot;&gt;/usr/lib&lt;/code&gt; which contained it, it was a safe assumption that by removing it manually would not cause any harm to the system.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/libzita-resampler.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;But I wanted to make sure nonetheless, and by following good practice I queried a search, which returned that it was not a bug, and that it could be removed from the &lt;code class=&quot;highlighter-rouge&quot;&gt;/usr/lib&lt;/code&gt;, to let the updates continue.&lt;/p&gt;
+
+&lt;p&gt;For further reading see:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://bugs.archlinux.org/task/57602&quot; target=&quot;_blank&quot;&gt;FS#57602 - [zita-resampler] Conflicting file in upgrade to 1.6.0-2&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.archlinux.org/news/zita-resampler-160-1-2-update-requires-manual-intervention/&quot; target=&quot;_blank&quot;&gt;zita-resampler 1.6.0-1 -&amp;gt; 2 update requires manual intervention&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">On the most recent upgrade for Arch, some file conflicts prevented the upgrades from going through.</summary></entry><entry><title type="html">Antergos Keyboard Selection During Installation</title><link href="https://bindkey.github.io/antergos-keyboard-selection-during-installation/" rel="alternate" type="text/html" title="Antergos Keyboard Selection During Installation" /><published>2018-01-27T07:49:17-06:00</published><updated>2018-01-27T07:49:17-06:00</updated><id>https://bindkey.github.io/antergos-keyboard-selection-during-installation</id><content type="html" xml:base="https://bindkey.github.io/antergos-keyboard-selection-during-installation/">&lt;p&gt;One of the drawbacks during the installation of &lt;a href=&quot;https://antergos.com&quot; target=&quot;_blank&quot;&gt;Antergos Linux&lt;/a&gt; was in identifying the keyboard layout option that was previously selected during the media installation.&lt;/p&gt;
 
 &lt;p&gt;As a result only the default variant was being used after installing the system.&lt;/p&gt;
 
@@ -289,50 +306,4 @@ further ado.&lt;/p&gt;
 
 &lt;p&gt;seemed to resolve the issue.&lt;/p&gt;
 
-&lt;p&gt;The same problem hasn’t been experienced on Antergos distribution.&lt;/p&gt;</content><author><name></name></author><summary type="html">For some unknown reason, I was getting the message network has been disconnected even on connections that have been previously used.</summary></entry><entry><title type="html">Mounting a Windows Hard Drive on Arch Linux</title><link href="https://bindkey.github.io/mounting-a-windows-hard-drive-on-arch-linux/" rel="alternate" type="text/html" title="Mounting a Windows Hard Drive on Arch Linux" /><published>2017-11-24T12:40:27-06:00</published><updated>2017-11-24T12:40:27-06:00</updated><id>https://bindkey.github.io/mounting-a-windows-hard-drive-on-arch-linux</id><content type="html" xml:base="https://bindkey.github.io/mounting-a-windows-hard-drive-on-arch-linux/">&lt;p&gt;After following some of the advice on &lt;a href=&quot;https://wiki.archlinux.org/index.php/NTFS-3G&quot;&gt;ntfs-3g arch linux&lt;/a&gt; entry which described the procedure to mount a windows system:&lt;/p&gt;
-
-&lt;p&gt;A &lt;code&gt;lsblk -f&lt;/code&gt; call on the filesystem returned:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; sdb                                                         
- ├─sdb1 vfat   SYSTEM   
- ├─sdb2 ntfs   Recovery 
- ├─sdb3                 
- ├─sdb4 ntfs   OS       
- └─sdb5 ntfs   Restore  
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;I was after &lt;strong&gt;sdb4&lt;/strong&gt; in this case. So I invoked on the command line:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; $ ntfs-3g /dev/sdb4 /mnt/fat/
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Which returned the message:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; Unprivileged user can not mount NTFS block devices using the external FUSE
- library. Either mount the volume as root, or rebuild NTFS-3G with integrated
- FUSE support and make it setuid root. Please see more information at
- http://tuxera.com/community/ntfs-3g-faq/#unprivileged
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;So with sudo privileges I invoked it again, but this time around the more precise error message that &lt;em&gt;Input/output error NTFS is inconsistent&lt;/em&gt; was returned on the terminal. The entire message was as follows:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; ntfs_attr_pread_i: ntfs_pread failed: Input/output error
- Failed to read of MFT, mft=391080 count=1 br=-1: Input/output error
- Falling back to read-only mount because the NTFS partition is in an
- unsafe state. Please resume and shutdown Windows fully (no hibernation
- or fast restarting.)
- ntfs_attr_pread_i: ntfs_pread failed: Input/output error
- Failed to read NTFS $Bitmap: Input/output error
- NTFS is either inconsistent, or there is a hardware fault, or it's a
- SoftRAID/FakeRAID hardware. In the first case run chkdsk /f on Windows
- then reboot into Windows twice. The usage of the /f parameter is very
- important! If the device is a SoftRAID/FakeRAID then first activate
- it
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;If I were to invoke it with &lt;code&gt;mount&lt;/code&gt; instead of &lt;code&gt;ntfs-3g&lt;/code&gt;, then it would have mounted it without a setback&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; $ sudo mount -t ntfs-3g /dev/sdb4 /mnt/fat
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;successfully mounted it and I was able to access the files on that hard drive.&lt;/p&gt;</content><author><name></name></author><summary type="html">After following some of the advice on ntfs-3g arch linux entry which described the procedure to mount a windows system:</summary></entry></feed>
+&lt;p&gt;The same problem hasn’t been experienced on Antergos distribution.&lt;/p&gt;</content><author><name></name></author><summary type="html">For some unknown reason, I was getting the message network has been disconnected even on connections that have been previously used.</summary></entry></feed>
