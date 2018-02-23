@@ -2,6 +2,7 @@
 Layout: post
 Title: "libzita-resampler.so.1 exists in filesystem"
 Date: 2018-02-22 
+tags: archlinux antergos
 ---
 
 On the most recent upgrade for Arch, some file conflicts prevented the upgrades from going through. 

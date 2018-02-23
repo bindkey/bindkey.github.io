@@ -171,6 +171,6 @@ var store = [{
         "teaser":null},{
         "title": "Libzita Conflicting",
         "excerpt":"On the most recent upgrade for Arch, some file conflicts prevented the upgrades from going through.The message was: zita-resampler: libzita-resampler.so.1 already exits in filesystemWhich by looking at the directory /usr/lib which contained it, it was a safe assumption that by removing it manually would not cause any harm to the system.But I wanted to make sure nonetheless, and by following good practice I queried a search, which returned that it was not a bug, and that it could be removed from the /usr/lib, to let the updates continue.For further reading see:FS#57602 - [zita-resampler] Conflicting file in upgrade to 1.6.0-2zita-resampler 1.6.0-1 -&gt; 2 update requires manual intervention","categories": [],
-        "tags": [],
+        "tags": ["archlinux","antergos"],
         "url": "https://bindkey.github.io/libzita-conflicting/",
         "teaser":null}]
