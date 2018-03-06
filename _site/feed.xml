@@ -1,4 +1,19 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.2">Jekyll</generator><link href="https://bindkey.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://bindkey.github.io/" rel="alternate" type="text/html" /><updated>2018-02-28T02:45:30-06:00</updated><id>https://bindkey.github.io/</id><title type="html">El blog del tecnólogo</title><subtitle>An amazing website.</subtitle><entry><title type="html">Libzita Resampler Already Exists In Filesystem</title><link href="https://bindkey.github.io/libzita-resampler-already-exists-in-filesystem/" rel="alternate" type="text/html" title="Libzita Resampler Already Exists In Filesystem" /><published>2018-02-23T00:00:00-06:00</published><updated>2018-02-23T00:00:00-06:00</updated><id>https://bindkey.github.io/libzita-resampler-already-exists-in-filesystem</id><content type="html" xml:base="https://bindkey.github.io/libzita-resampler-already-exists-in-filesystem/">&lt;p&gt;On the most recent upgrade for Arch, some file conflicts prevented the upgrades from going through.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="https://bindkey.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://bindkey.github.io/" rel="alternate" type="text/html" /><updated>2018-03-06T01:59:11-06:00</updated><id>https://bindkey.github.io/</id><title type="html">El blog del tecnólogo</title><subtitle>An amazing website.</subtitle><entry><title type="html">Disabling session autostart on Antergos Linux</title><link href="https://bindkey.github.io/disabling-session-autostart-on-antergos-linux/" rel="alternate" type="text/html" title="Disabling session autostart on Antergos Linux" /><published>2018-03-06T00:00:00-06:00</published><updated>2018-03-06T00:00:00-06:00</updated><id>https://bindkey.github.io/disabling-session-autostart-on-antergos-linux</id><content type="html" xml:base="https://bindkey.github.io/disabling-session-autostart-on-antergos-linux/">&lt;p&gt;I’ve looked here at &lt;a href=&quot;https://bbs.archlinux.org/viewtopic.php?id=164902&quot; target=&quot;_blank&quot;&gt;I don’t want programs restored after a reboot&lt;/a&gt; and over at &lt;a href=&quot;https://bbs.archlinux.org/viewtopic.php?id=164354&quot; target=&quot;_blank&quot;&gt;xfce runs some apps twice at startup&lt;/a&gt; for an answer to the question, especially with Antergos, where this behavior has been evident.&lt;/p&gt;
+
+&lt;p&gt;Whether it will be persistent across sessions - no pun intended - it’s something that only time will tell.&lt;/p&gt;
+
+&lt;p&gt;Even after reading some pieces of advice from the &lt;a href=&quot;https://wiki.archlinux.org/index.php/xfce#Disable_saved_sessions&quot; target=&quot;_blank&quot;&gt;Disable saved sessions - Arch wiki&lt;/a&gt;, only the last &lt;code class=&quot;highlighter-rouge&quot;&gt;xfconf-query&lt;/code&gt; worked successfully.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; xfconf-query -c xfce4-session -p /general/SaveOnExit -n -t bool -s false
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/tip-for-xfconfquery.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;To double check that the settings went to effect, one would have to acess the &lt;strong&gt;xfce4-session.xml&lt;/strong&gt; file that should be located at the &lt;code class=&quot;highlighter-rouge&quot;&gt;.config/xfce4/xfconf/xfce-perchannel-xml/&lt;/code&gt; path.&lt;/p&gt;
+
+&lt;p&gt;One must remember to clear the saved sessions afterwards for the changes to take effect. I don’t know if by not doing so, this would have prevented the autostart items from appearing, regardless, and I’m sure one could tweak with the &lt;code class=&quot;highlighter-rouge&quot;&gt;xfonf-query&lt;/code&gt; further to find out if this is the case.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/xfce4-session-preferences-session.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">I’ve looked here at I don’t want programs restored after a reboot and over at xfce runs some apps twice at startup for an answer to the question, especially with Antergos, where this behavior has been evident.</summary></entry><entry><title type="html">Libzita Resampler Already Exists In Filesystem</title><link href="https://bindkey.github.io/libzita-resampler-already-exists-in-filesystem/" rel="alternate" type="text/html" title="Libzita Resampler Already Exists In Filesystem" /><published>2018-02-23T00:00:00-06:00</published><updated>2018-02-23T00:00:00-06:00</updated><id>https://bindkey.github.io/libzita-resampler-already-exists-in-filesystem</id><content type="html" xml:base="https://bindkey.github.io/libzita-resampler-already-exists-in-filesystem/">&lt;p&gt;On the most recent upgrade for Arch, some file conflicts prevented the upgrades from going through.&lt;/p&gt;
 
 &lt;p&gt;The message was:&lt;/p&gt;
 
@@ -293,17 +308,4 @@ further ado.&lt;/p&gt;
 &lt;p&gt;and&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt; map buffer insert %{;} %{\} 
-&lt;/code&gt;&lt;/pre&gt;</content><author><name></name></author><summary type="html">Configuring the kakoune text editor initialization file has been nothing short of a chore, as it requires the path environment to be correctly set, before any changes on the kakrc take ahold of the settings.</summary></entry><entry><title type="html">Network Has Been Disconnected Manjaro Kde Xfce</title><link href="https://bindkey.github.io/network-has-been-disconnected-manjaro-kde-xfce/" rel="alternate" type="text/html" title="Network Has Been Disconnected Manjaro Kde Xfce" /><published>2017-12-01T12:41:54-06:00</published><updated>2017-12-01T12:41:54-06:00</updated><id>https://bindkey.github.io/network-has-been-disconnected-manjaro-kde-xfce</id><content type="html" xml:base="https://bindkey.github.io/network-has-been-disconnected-manjaro-kde-xfce/">&lt;p&gt;For some unknown reason, I was getting the message &lt;code&gt;network has been disconnected&lt;/code&gt; even on connections that have been previously used.&lt;/p&gt;
-
-&lt;p&gt;Contrary to the post entitled &lt;strong&gt;NetworkManager doesn’t automatically ask for a password for new network&lt;/strong&gt;, see &lt;a href=&quot;https://bbs.archlinux.org/viewtopic.php?id=142066&quot; target=&quot;_blank&quot;&gt;see this post on bbs.archlinux.org&lt;/a&gt; in my case the connection was used many times before.&lt;/p&gt;
-
-&lt;p&gt;The dependency problem that has plagued this bug seemed to make a comeback on a most of Manjaro desktop environments.&lt;/p&gt;
-
-&lt;p&gt;Installing, or better put, reinstalling it with&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; yaourt -S gnome-keyring
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;seemed to resolve the issue.&lt;/p&gt;
-
-&lt;p&gt;The same problem hasn’t been experienced on Antergos distribution.&lt;/p&gt;</content><author><name></name></author><summary type="html">For some unknown reason, I was getting the message network has been disconnected even on connections that have been previously used.</summary></entry></feed>
+&lt;/code&gt;&lt;/pre&gt;</content><author><name></name></author><summary type="html">Configuring the kakoune text editor initialization file has been nothing short of a chore, as it requires the path environment to be correctly set, before any changes on the kakrc take ahold of the settings.</summary></entry></feed>

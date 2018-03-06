@@ -9,38 +9,38 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Urxvt Copy Paste Tweaking - El blog del tecnólogo</title>
-<meta name="description" content="I haven’t read the man pages enough to figure out some of the parameters that play an important behavior for the full functionality of the mighty urxvt, and it was not until I read a post - which was more of a comment on the thread entitled right click paste in urxvt terminal on the archlinux.org forum - when I realized that by the combination of ctrl and right mouse click would copy and paste the selected text on the X window system.">
+<!-- begin _includes/seo.html --><title>Disabling session autostart on Antergos Linux - El blog del tecnólogo</title>
+<meta name="description" content="I’ve looked here at I don’t want programs restored after a reboot and over at xfce runs some apps twice at startup for an answer to the question, especially with Antergos, where this behavior has been evident.">
 
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="El blog del tecnólogo">
-<meta property="og:title" content="Urxvt Copy Paste Tweaking">
-<meta property="og:url" content="https://bindkey.github.io/urxvt-copy-paste-tweaking/">
+<meta property="og:title" content="Disabling session autostart on Antergos Linux">
+<meta property="og:url" content="https://bindkey.github.io/disabling-session-autostart-on-antergos-linux/">
 
 
-  <meta property="og:description" content="I haven’t read the man pages enough to figure out some of the parameters that play an important behavior for the full functionality of the mighty urxvt, and it was not until I read a post - which was more of a comment on the thread entitled right click paste in urxvt terminal on the archlinux.org forum - when I realized that by the combination of ctrl and right mouse click would copy and paste the selected text on the X window system.">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2017-08-18T14:07:29-05:00">
+  <meta property="og:description" content="I’ve looked here at I don’t want programs restored after a reboot and over at xfce runs some apps twice at startup for an answer to the question, especially with Antergos, where this behavior has been evident.">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2018-03-06T00:00:00-06:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="https://bindkey.github.io/urxvt-copy-paste-tweaking/">
+
+<link rel="canonical" href="https://bindkey.github.io/disabling-session-autostart-on-antergos-linux/">
 
 
 
@@ -149,15 +149,15 @@
   
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Urxvt Copy Paste Tweaking">
-    <meta itemprop="description" content="I haven’t read the man pages enough to figure out some of the parameters that play an important behavior for the full functionality of the mighty urxvt, and it was not until I read a post - which was more of a comment on the thread entitled right click paste in urxvt terminal on the archlinux.org forum - when I realized that by the combination of ctrl and right mouse click would copy and paste the selected text on the X window system.">
-    <meta itemprop="datePublished" content="August 18, 2017">
+    <meta itemprop="headline" content="Disabling session autostart on Antergos Linux">
+    <meta itemprop="description" content="I’ve looked here at I don’t want programs restored after a reboot and over at xfce runs some apps twice at startup for an answer to the question, especially with Antergos, where this behavior has been evident.">
+    <meta itemprop="datePublished" content="March 06, 2018">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 class="page__title" itemprop="headline">Urxvt Copy Paste Tweaking
+          <h1 class="page__title" itemprop="headline">Disabling session autostart on Antergos Linux
 </h1>
           
             <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
@@ -173,11 +173,23 @@
 
       <section class="page__content" itemprop="text">
         
-        <p>I haven’t read the <code>man</code> pages enough to figure out some of the parameters that play an important behavior for the full functionality of the mighty <strong>urxvt</strong>, and it was not until I read a post - which was more of a comment on the thread entitled <a href="https://bbs.archlinux.org/viewtopic.php?id=221108" target="_blank">right click paste in urxvt terminal</a> on the archlinux.org forum - when I realized that by the combination of <strong>ctrl</strong> and right mouse click would copy and paste the selected text on the X window system.</p>
+        <p>I’ve looked here at <a href="https://bbs.archlinux.org/viewtopic.php?id=164902" target="_blank">I don’t want programs restored after a reboot</a> and over at <a href="https://bbs.archlinux.org/viewtopic.php?id=164354" target="_blank">xfce runs some apps twice at startup</a> for an answer to the question, especially with Antergos, where this behavior has been evident.</p>
 
-<p><img src="/images/2017-08-18-ctrl-right-click-urxvt.png" alt="" /></p>
+<p>Whether it will be persistent across sessions - no pun intended - it’s something that only time will tell.</p>
 
-<p>I found the above to work without a problem under <strong>xclip</strong> so far.</p>
+<p>Even after reading some pieces of advice from the <a href="https://wiki.archlinux.org/index.php/xfce#Disable_saved_sessions" target="_blank">Disable saved sessions - Arch wiki</a>, only the last <code class="highlighter-rouge">xfconf-query</code> worked successfully.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> xfconf-query -c xfce4-session -p /general/SaveOnExit -n -t bool -s false
+</code></pre></div></div>
+
+<p><img src="/images/tip-for-xfconfquery.png" alt="" /></p>
+
+<p>To double check that the settings went to effect, one would have to acess the <strong>xfce4-session.xml</strong> file that should be located at the <code class="highlighter-rouge">.config/xfce4/xfconf/xfce-perchannel-xml/</code> path.</p>
+
+<p>One must remember to clear the saved sessions afterwards for the changes to take effect. I don’t know if by not doing so, this would have prevented the autostart items from appearing, regardless, and I’m sure one could tweak with the <code class="highlighter-rouge">xfonf-query</code> further to find out if this is the case.</p>
+
+<p><img src="/images/xfce4-session-preferences-session.png" alt="" /></p>
+
 
 
         
@@ -189,7 +201,7 @@
 
 
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-08-18T14:07:29-05:00">August 18, 2017</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-03-06T00:00:00-06:00">March 06, 2018</time></p>
         
       </footer>
 
@@ -198,12 +210,11 @@
       
   <nav class="pagination">
     
-      <a href="https://bindkey.github.io/urxvt-background-tweaking/" class="pagination--pager" title="Urxvt Background Tweaking
+      <a href="https://bindkey.github.io/libzita-resampler-already-exists-in-filesystem/" class="pagination--pager" title="Libzita Resampler Already Exists In Filesystem
 ">Previous</a>
     
     
-      <a href="https://bindkey.github.io/manjaro-xfce-bluetooth-problem/" class="pagination--pager" title="Manjaro Xfce Bluetooth Problem
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 
@@ -217,32 +228,6 @@
     <div class="page__related">
       <h4 class="page__related-title">You May Also Enjoy</h4>
       <div class="grid__wrapper">
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="https://bindkey.github.io/disabling-session-autostart-on-antergos-linux/" rel="permalink">Disabling session autostart on Antergos Linux
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  less than 1 minute read
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">I’ve looked here at I don’t want programs restored after a reboot and over at xfce runs some apps twice at startup for an answer to the question, especially ...</p>
-  </article>
-</div>
         
           
 
@@ -326,8 +311,35 @@
   </article>
 </div>
         
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="https://bindkey.github.io/udisks2-udiskie-fares-better-than-ntfs-3g/" rel="permalink">Udisks2 Udiskie Fares Better Than Ntfs 3g
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">It is my opinion, based mostly not on what I’ve read, but instead on what I’ve encountered during the handling of a failed hard disk, that the disk volume mo...</p>
+  </article>
+</div>
+        
       </div>
     </div>
+  
   
 </div>
 
