@@ -7,7 +7,7 @@ date : "2017-11-16T13:01:35-05:00"
 
 <p>An error that was not uncommon came up on the screen:</p>
 
-<pre><code> *** Please tell me who you are.
+<pre><code> Please tell me who you are.
 
  Run
 
@@ -34,6 +34,6 @@ date : "2017-11-16T13:01:35-05:00"
 
 <p>On the website that aims at answering questions about the ubuntu distributiion, there are more examples with this purpose. See for example <a href="https://askubuntu.com/questions/206449/" target="_blank"> git config global file - remove settings</a></p>
 
-<p>The most important part about it lies on the command <strong>–unset-all</strong>, even though the <a href="https://stackoverflow.com//a/282550" target="_blank">  answer</a> which pointed at it was not the accepted solution in this case.</p>
+<p>The most important part about it lies on the command <strong>–unset-all</strong>, even though the <a href="https://askubuntu.com//a/282550" target="_blank">  answer</a> which pointed at it was not the accepted solution in this case.</p>
 
 <p>For more details about the config-file for <strong>git</strong> it is recommended to read the manual <strong>man git-config</strong> for more details.</p>
