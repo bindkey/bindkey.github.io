@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Disabling session autostart on Antergos Linux"
+title: "Disabling autostart session on Antergos Linux"
 ---
 
 I've looked here at <a href="https://bbs.archlinux.org/viewtopic.php?id=164902" target="_blank">I don't want programs restored after a reboot</a> and over at <a href="https://bbs.archlinux.org/viewtopic.php?id=164354" target="_blank">xfce runs some apps twice at startup</a> for an answer to the question, especially with Antergos, where this behavior has been evident. 

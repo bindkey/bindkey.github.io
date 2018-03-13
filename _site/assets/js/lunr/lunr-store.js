@@ -174,7 +174,7 @@ var store = [{
         "tags": ["archlinux","antergos"],
         "url": "https://bindkey.github.io/libzita-resampler-already-exists-in-filesystem/",
         "teaser":null},{
-        "title": "Disabling session autostart on Antergos Linux",
+        "title": "Disabling autostart session on Antergos Linux",
         "excerpt":"I’ve looked here at I don’t want programs restored after a reboot and over at xfce runs some apps twice at startup for an answer to the question, especially with Antergos, where this behavior has been evident.Whether it will be persistent across sessions - no pun intended - it’s something that only time will tell.Even after reading some pieces of advice from the Disable saved sessions - Arch wiki, only the last xfconf-query worked successfully. xfconf-query -c xfce4-session -p /general/SaveOnExit -n -t bool -s falseTo double check that the settings went to effect, one would have to acess the xfce4-session.xml file that should be located at the .config/xfce4/xfconf/xfce-perchannel-xml/ path.One must remember to clear the saved sessions afterwards for the changes to take effect. I don’t know if by not doing so, this would have prevented the autostart items from appearing, regardless, and I’m sure one could tweak with the xfonf-query further to find out if this is the case.","categories": [],
         "tags": [],
         "url": "https://bindkey.github.io/disabling-session-autostart-on-antergos-linux/",
