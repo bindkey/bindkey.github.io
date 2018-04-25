@@ -179,7 +179,7 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/disabling-session-autostart-on-antergos-linux/",
         "teaser":null},{
-        "title": "Antergos chromium segmentation fault input ouput error ",
+        "title": "Antergos chromium segmentation fault input output error ",
         "excerpt":"After an update from Antergos, chromium browserhad an infamous segmentation fault with itscore dumped enclosed between parentheses.Clicking through its gui interface, would simplyreturn an input/output error.I didn’t have enough time to look up the issue, Andwhatever I found about the issue, was not relevantto the problem.I did notice though, that chromium-flags was theculprit.","categories": [],
         "tags": [],
         "url": "http://localhost:4000/antergos-chromium-segmentation-fault-input-output-error/",

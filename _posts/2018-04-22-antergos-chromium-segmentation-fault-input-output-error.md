@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Antergos chromium segmentation fault input ouput error "
+title: "Antergos chromium segmentation fault input output error "
 ---
 
 After an update from Antergos, chromium browser
