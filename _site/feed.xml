@@ -1,4 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="https://bindkey.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://bindkey.github.io/" rel="alternate" type="text/html" /><updated>2018-03-13T00:17:21-05:00</updated><id>https://bindkey.github.io/</id><title type="html">El blog del tecnólogo</title><subtitle>An amazing website.</subtitle><entry><title type="html">Disabling autostart session on Antergos Linux</title><link href="https://bindkey.github.io/disabling-session-autostart-on-antergos-linux/" rel="alternate" type="text/html" title="Disabling autostart session on Antergos Linux" /><published>2018-03-06T00:00:00-06:00</published><updated>2018-03-06T00:00:00-06:00</updated><id>https://bindkey.github.io/disabling-session-autostart-on-antergos-linux</id><content type="html" xml:base="https://bindkey.github.io/disabling-session-autostart-on-antergos-linux/">&lt;p&gt;I’ve looked here at &lt;a href=&quot;https://bbs.archlinux.org/viewtopic.php?id=164902&quot; target=&quot;_blank&quot;&gt;I don’t want programs restored after a reboot&lt;/a&gt; and over at &lt;a href=&quot;https://bbs.archlinux.org/viewtopic.php?id=164354&quot; target=&quot;_blank&quot;&gt;xfce runs some apps twice at startup&lt;/a&gt; for an answer to the question, especially with Antergos, where this behavior has been evident.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-04-25T01:48:12-05:00</updated><id>http://localhost:4000/</id><title type="html">El blog del tecnólogo</title><subtitle>An amazing website.</subtitle><entry><title type="html">Antergos chromium segmentation fault input ouput error</title><link href="http://localhost:4000/antergos-chromium-segmentation-fault-input-output-error/" rel="alternate" type="text/html" title="Antergos chromium segmentation fault input ouput error " /><published>2018-04-22T00:00:00-05:00</published><updated>2018-04-22T00:00:00-05:00</updated><id>http://localhost:4000/antergos-chromium-segmentation-fault-input-output-error</id><content type="html" xml:base="http://localhost:4000/antergos-chromium-segmentation-fault-input-output-error/">&lt;p&gt;After an update from Antergos, chromium browser
+had an infamous &lt;code class=&quot;highlighter-rouge&quot;&gt;segmentation fault&lt;/code&gt; with its
+&lt;code class=&quot;highlighter-rouge&quot;&gt;core dumped&lt;/code&gt; enclosed between parentheses.&lt;/p&gt;
+
+&lt;p&gt;Clicking through its gui interface, would simply
+return an input/output error.&lt;/p&gt;
+
+&lt;p&gt;I didn’t have enough time to look up the issue, And
+whatever I found about the issue, was not relevant
+to the problem.&lt;/p&gt;
+
+&lt;p&gt;I did notice though, that chromium-flags was the
+culprit.&lt;/p&gt;</content><author><name></name></author><summary type="html">After an update from Antergos, chromium browser had an infamous segmentation fault with its core dumped enclosed between parentheses.</summary></entry><entry><title type="html">Disabling autostart session on Antergos Linux</title><link href="http://localhost:4000/disabling-session-autostart-on-antergos-linux/" rel="alternate" type="text/html" title="Disabling autostart session on Antergos Linux" /><published>2018-03-06T00:00:00-06:00</published><updated>2018-03-06T00:00:00-06:00</updated><id>http://localhost:4000/disabling-session-autostart-on-antergos-linux</id><content type="html" xml:base="http://localhost:4000/disabling-session-autostart-on-antergos-linux/">&lt;p&gt;I’ve looked here at &lt;a href=&quot;https://bbs.archlinux.org/viewtopic.php?id=164902&quot; target=&quot;_blank&quot;&gt;I don’t want programs restored after a reboot&lt;/a&gt; and over at &lt;a href=&quot;https://bbs.archlinux.org/viewtopic.php?id=164354&quot; target=&quot;_blank&quot;&gt;xfce runs some apps twice at startup&lt;/a&gt; for an answer to the question, especially with Antergos, where this behavior has been evident.&lt;/p&gt;
 
 &lt;p&gt;Whether it will be persistent across sessions - no pun intended - it’s something that only time will tell.&lt;/p&gt;
 
@@ -13,7 +25,7 @@
 
 &lt;p&gt;One must remember to clear the saved sessions afterwards for the changes to take effect. I don’t know if by not doing so, this would have prevented the autostart items from appearing, regardless, and I’m sure one could tweak with the &lt;code class=&quot;highlighter-rouge&quot;&gt;xfonf-query&lt;/code&gt; further to find out if this is the case.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/xfce4-session-preferences-session.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">I’ve looked here at I don’t want programs restored after a reboot and over at xfce runs some apps twice at startup for an answer to the question, especially with Antergos, where this behavior has been evident.</summary></entry><entry><title type="html">Libzita Resampler Already Exists In Filesystem</title><link href="https://bindkey.github.io/libzita-resampler-already-exists-in-filesystem/" rel="alternate" type="text/html" title="Libzita Resampler Already Exists In Filesystem" /><published>2018-02-23T00:00:00-06:00</published><updated>2018-02-23T00:00:00-06:00</updated><id>https://bindkey.github.io/libzita-resampler-already-exists-in-filesystem</id><content type="html" xml:base="https://bindkey.github.io/libzita-resampler-already-exists-in-filesystem/">&lt;p&gt;On the most recent upgrade for Arch, some file conflicts prevented the upgrades from going through.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/xfce4-session-preferences-session.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">I’ve looked here at I don’t want programs restored after a reboot and over at xfce runs some apps twice at startup for an answer to the question, especially with Antergos, where this behavior has been evident.</summary></entry><entry><title type="html">Libzita Resampler Already Exists In Filesystem</title><link href="http://localhost:4000/libzita-resampler-already-exists-in-filesystem/" rel="alternate" type="text/html" title="Libzita Resampler Already Exists In Filesystem" /><published>2018-02-23T00:00:00-06:00</published><updated>2018-02-23T00:00:00-06:00</updated><id>http://localhost:4000/libzita-resampler-already-exists-in-filesystem</id><content type="html" xml:base="http://localhost:4000/libzita-resampler-already-exists-in-filesystem/">&lt;p&gt;On the most recent upgrade for Arch, some file conflicts prevented the upgrades from going through.&lt;/p&gt;
 
 &lt;p&gt;The message was:&lt;/p&gt;
 
@@ -30,7 +42,7 @@
 
 &lt;p&gt;&lt;a href=&quot;https://bugs.archlinux.org/task/57602&quot; target=&quot;_blank&quot;&gt;FS#57602 - [zita-resampler] Conflicting file in upgrade to 1.6.0-2&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://www.archlinux.org/news/zita-resampler-160-1-2-update-requires-manual-intervention/&quot; target=&quot;_blank&quot;&gt;zita-resampler 1.6.0-1 -&amp;gt; 2 update requires manual intervention&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="archlinux" /><category term="antergos" /><summary type="html">On the most recent upgrade for Arch, some file conflicts prevented the upgrades from going through.</summary></entry><entry><title type="html">Antergos Keyboard Selection During Installation</title><link href="https://bindkey.github.io/antergos-keyboard-selection-during-installation/" rel="alternate" type="text/html" title="Antergos Keyboard Selection During Installation" /><published>2018-01-27T07:49:17-06:00</published><updated>2018-01-27T07:49:17-06:00</updated><id>https://bindkey.github.io/antergos-keyboard-selection-during-installation</id><content type="html" xml:base="https://bindkey.github.io/antergos-keyboard-selection-during-installation/">&lt;p&gt;One of the drawbacks during the installation of &lt;a href=&quot;https://antergos.com&quot; target=&quot;_blank&quot;&gt;Antergos Linux&lt;/a&gt; was in identifying the keyboard layout option that was previously selected during the media installation.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.archlinux.org/news/zita-resampler-160-1-2-update-requires-manual-intervention/&quot; target=&quot;_blank&quot;&gt;zita-resampler 1.6.0-1 -&amp;gt; 2 update requires manual intervention&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="archlinux" /><category term="antergos" /><summary type="html">On the most recent upgrade for Arch, some file conflicts prevented the upgrades from going through.</summary></entry><entry><title type="html">Antergos Keyboard Selection During Installation</title><link href="http://localhost:4000/antergos-keyboard-selection-during-installation/" rel="alternate" type="text/html" title="Antergos Keyboard Selection During Installation" /><published>2018-01-27T07:49:17-06:00</published><updated>2018-01-27T07:49:17-06:00</updated><id>http://localhost:4000/antergos-keyboard-selection-during-installation</id><content type="html" xml:base="http://localhost:4000/antergos-keyboard-selection-during-installation/">&lt;p&gt;One of the drawbacks during the installation of &lt;a href=&quot;https://antergos.com&quot; target=&quot;_blank&quot;&gt;Antergos Linux&lt;/a&gt; was in identifying the keyboard layout option that was previously selected during the media installation.&lt;/p&gt;
 
 &lt;p&gt;As a result only the default variant was being used after installing the system.&lt;/p&gt;
 
@@ -60,7 +72,7 @@
 &lt;li&gt;&lt;p&gt;&lt;a name=&quot;sample&quot;&gt;&lt;a href=&quot;https://wiki.archlinux.org/index.php/Keyboard_configuration_in_Xorg#Using_X_configuration_files&quot; target=&quot;_blank&quot;&gt;Using X Configuration files 00-keyboard.conf&lt;/a&gt;&lt;/a&gt;&lt;a href=&quot;#sampleref&quot;&gt; &amp;#x21A9;&amp;#xFE0E;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;&lt;a name=&quot;localectl&quot;&gt;&lt;a href=&quot;https://wiki.archlinux.org/index.php/Keyboard_configuration_in_Xorg#Using_localectl&quot; target=&quot;_blank&quot;&gt;Using localectl&lt;/a&gt;&lt;/a&gt;&lt;a href=&quot;#localectlref&quot;&gt; &amp;#x21A9;&amp;#xFE0E;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;</content><author><name></name></author><summary type="html">One of the drawbacks during the installation of Antergos Linux was in identifying the keyboard layout option that was previously selected during the media installation.</summary></entry><entry><title type="html">Antergos Grub Selection</title><link href="https://bindkey.github.io/antergos-grub-selection/" rel="alternate" type="text/html" title="Antergos Grub Selection" /><published>2018-01-20T07:38:47-06:00</published><updated>2018-01-20T07:38:47-06:00</updated><id>https://bindkey.github.io/antergos-grub-selection</id><content type="html" xml:base="https://bindkey.github.io/antergos-grub-selection/">&lt;p&gt;During the installation of Antergos, there was an option to install the Linux LTS kernel along with the default latest stable version.&lt;/p&gt;
+&lt;/ol&gt;</content><author><name></name></author><summary type="html">One of the drawbacks during the installation of Antergos Linux was in identifying the keyboard layout option that was previously selected during the media installation.</summary></entry><entry><title type="html">Antergos Grub Selection</title><link href="http://localhost:4000/antergos-grub-selection/" rel="alternate" type="text/html" title="Antergos Grub Selection" /><published>2018-01-20T07:38:47-06:00</published><updated>2018-01-20T07:38:47-06:00</updated><id>http://localhost:4000/antergos-grub-selection</id><content type="html" xml:base="http://localhost:4000/antergos-grub-selection/">&lt;p&gt;During the installation of Antergos, there was an option to install the Linux LTS kernel along with the default latest stable version.&lt;/p&gt;
 
 &lt;p&gt;Even though it was installed appropriately, the option to select the other kernel, could not be seen from the Grub selection window.&lt;/p&gt;
 
@@ -96,7 +108,7 @@
 
 &lt;p&gt;For more info about this, visit the wiki:&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://wiki.archlinux.org/index.php/GRUB/Tips_and_tricks&quot; target=&quot;_blank&quot;&gt;GRUB/Tips and tricks&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">During the installation of Antergos, there was an option to install the Linux LTS kernel along with the default latest stable version.</summary></entry><entry><title type="html">Udisks2 Udiskie Fares Better Than Ntfs 3g</title><link href="https://bindkey.github.io/udisks2-udiskie-fares-better-than-ntfs-3g/" rel="alternate" type="text/html" title="Udisks2 Udiskie Fares Better Than Ntfs 3g" /><published>2018-01-16T07:45:02-06:00</published><updated>2018-01-16T07:45:02-06:00</updated><id>https://bindkey.github.io/udisks2-udiskie-fares-better-than-ntfs-3g</id><content type="html" xml:base="https://bindkey.github.io/udisks2-udiskie-fares-better-than-ntfs-3g/">&lt;p&gt;It is my opinion, based mostly not on what I’ve read, but instead on what I’ve encountered during the handling of a failed hard disk, that the disk volume mounting utility udisks2 fares better than say, ntfs-3g.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://wiki.archlinux.org/index.php/GRUB/Tips_and_tricks&quot; target=&quot;_blank&quot;&gt;GRUB/Tips and tricks&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">During the installation of Antergos, there was an option to install the Linux LTS kernel along with the default latest stable version.</summary></entry><entry><title type="html">Udisks2 Udiskie Fares Better Than Ntfs 3g</title><link href="http://localhost:4000/udisks2-udiskie-fares-better-than-ntfs-3g/" rel="alternate" type="text/html" title="Udisks2 Udiskie Fares Better Than Ntfs 3g" /><published>2018-01-16T07:45:02-06:00</published><updated>2018-01-16T07:45:02-06:00</updated><id>http://localhost:4000/udisks2-udiskie-fares-better-than-ntfs-3g</id><content type="html" xml:base="http://localhost:4000/udisks2-udiskie-fares-better-than-ntfs-3g/">&lt;p&gt;It is my opinion, based mostly not on what I’ve read, but instead on what I’ve encountered during the handling of a failed hard disk, that the disk volume mounting utility udisks2 fares better than say, ntfs-3g.&lt;/p&gt;
 
 &lt;p&gt;Quite possibly there could be many improvements with this software, and there is no doubt about it, but considering wear-and-tear conditions of the disk, among other considerations, and, as long as udisks2 is run without an interruption, no other mounting options utility that is currently available may be able to improve its overall performance.&lt;/p&gt;
 
@@ -110,7 +122,7 @@
 
 &lt;p&gt;&lt;a href=&quot;https://wiki.archlinux.org/index.php/NTFS-3G&quot; target=&quot;_blank&quot;&gt;ntfs-3g Arch Linux&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://github.com/coldfix/udiskie/wiki/Usage&quot; target=&quot;_blank&quot;&gt;udiskie on github&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">It is my opinion, based mostly not on what I’ve read, but instead on what I’ve encountered during the handling of a failed hard disk, that the disk volume mounting utility udisks2 fares better than say, ntfs-3g.</summary></entry><entry><title type="html">Metadata Irreversible</title><link href="https://bindkey.github.io/metadata-irreversible/" rel="alternate" type="text/html" title="Metadata Irreversible" /><published>2017-12-22T03:13:37-06:00</published><updated>2017-12-22T03:13:37-06:00</updated><id>https://bindkey.github.io/metadata-irreversible</id><content type="html" xml:base="https://bindkey.github.io/metadata-irreversible/">&lt;p&gt;One of the easiest ways to remove all metadata from a file, is by invoking &lt;a href=&quot;#exiftool&quot;&gt;&lt;sup id=&quot;refexiftool&quot;&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/coldfix/udiskie/wiki/Usage&quot; target=&quot;_blank&quot;&gt;udiskie on github&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">It is my opinion, based mostly not on what I’ve read, but instead on what I’ve encountered during the handling of a failed hard disk, that the disk volume mounting utility udisks2 fares better than say, ntfs-3g.</summary></entry><entry><title type="html">Metadata Irreversible</title><link href="http://localhost:4000/metadata-irreversible/" rel="alternate" type="text/html" title="Metadata Irreversible" /><published>2017-12-22T03:13:37-06:00</published><updated>2017-12-22T03:13:37-06:00</updated><id>http://localhost:4000/metadata-irreversible</id><content type="html" xml:base="http://localhost:4000/metadata-irreversible/">&lt;p&gt;One of the easiest ways to remove all metadata from a file, is by invoking &lt;a href=&quot;#exiftool&quot;&gt;&lt;sup id=&quot;refexiftool&quot;&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt; $ exiftool -all= &amp;lt;file&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
@@ -131,7 +143,7 @@
 
 &lt;h2 id=&quot;references&quot;&gt;&lt;strong&gt;References&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;p&gt;&lt;a name=&quot;exiftool&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://sno.phy.queensu.ca/~phil/exiftool/exiftool_pod.html&quot; target=&quot;_blank&quot;&gt;exiftool man pages&lt;/a&gt; &lt;a href=&quot;#refexiftool&quot;&gt;_↩︎&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">One of the easiest ways to remove all metadata from a file, is by invoking 1</summary></entry><entry><title type="html">Manjaro Kde Plasma Dolphin Mtp Cant Open File</title><link href="https://bindkey.github.io/manjaro-kde-plasma-dolphin-mtp-cant-open-file/" rel="alternate" type="text/html" title="Manjaro Kde Plasma Dolphin Mtp Cant Open File" /><published>2017-12-16T12:26:25-06:00</published><updated>2017-12-16T12:26:25-06:00</updated><id>https://bindkey.github.io/manjaro-kde-plasma-dolphin-mtp-cant-open-file</id><content type="html" xml:base="https://bindkey.github.io/manjaro-kde-plasma-dolphin-mtp-cant-open-file/">&lt;p&gt;&lt;strong&gt;MTP&lt;/strong&gt; implementation runs on most desktop environments without a problem. Except on KDE where it has had several problems in identifying and initializing a simple file from any of the devices that have been connected to the system, mainly through the USB port.&lt;/p&gt;
+&lt;p&gt;&lt;a name=&quot;exiftool&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://sno.phy.queensu.ca/~phil/exiftool/exiftool_pod.html&quot; target=&quot;_blank&quot;&gt;exiftool man pages&lt;/a&gt; &lt;a href=&quot;#refexiftool&quot;&gt;_↩︎&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">One of the easiest ways to remove all metadata from a file, is by invoking 1</summary></entry><entry><title type="html">Manjaro Kde Plasma Dolphin Mtp Cant Open File</title><link href="http://localhost:4000/manjaro-kde-plasma-dolphin-mtp-cant-open-file/" rel="alternate" type="text/html" title="Manjaro Kde Plasma Dolphin Mtp Cant Open File" /><published>2017-12-16T12:26:25-06:00</published><updated>2017-12-16T12:26:25-06:00</updated><id>http://localhost:4000/manjaro-kde-plasma-dolphin-mtp-cant-open-file</id><content type="html" xml:base="http://localhost:4000/manjaro-kde-plasma-dolphin-mtp-cant-open-file/">&lt;p&gt;&lt;strong&gt;MTP&lt;/strong&gt; implementation runs on most desktop environments without a problem. Except on KDE where it has had several problems in identifying and initializing a simple file from any of the devices that have been connected to the system, mainly through the USB port.&lt;/p&gt;
 
 &lt;p&gt;It’s really a shame that although Plasma KDE fairly supports Bluetooth protocol better than the rest of other desktop environments, it largely fails with both gwenview and its default Dolphin manager to open up files directly.&lt;/p&gt;
 
@@ -153,7 +165,7 @@
 
 &lt;p&gt;&lt;strong&gt;References&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://mobile.slashdot.org/story/17/09/12/2030213/blueborne-vulnerabilities-impact-over-5-billion-bluetooth-enabled-devices&quot; target=&quot;_blank&quot;&gt;Blueborne vulnerabilities impact devices&lt;/a&gt;&lt;a name=&quot;blue&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#blueref&quot;&gt;_↩︎&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">MTP implementation runs on most desktop environments without a problem. Except on KDE where it has had several problems in identifying and initializing a simple file from any of the devices that have been connected to the system, mainly through the USB port.</summary></entry><entry><title type="html">Manjaro Kde Plasma Error Unknown Application Folder</title><link href="https://bindkey.github.io/manjaro-kde-plasma-error-unknown-application-folder/" rel="alternate" type="text/html" title="Manjaro Kde Plasma Error Unknown Application Folder" /><published>2017-12-14T12:28:52-06:00</published><updated>2017-12-14T12:28:52-06:00</updated><id>https://bindkey.github.io/manjaro-kde-plasma-error-unknown-application-folder</id><content type="html" xml:base="https://bindkey.github.io/manjaro-kde-plasma-error-unknown-application-folder/">&lt;p&gt;It’s apparently a foolish idea to login as root from a file manager on Plasma KDE.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://mobile.slashdot.org/story/17/09/12/2030213/blueborne-vulnerabilities-impact-over-5-billion-bluetooth-enabled-devices&quot; target=&quot;_blank&quot;&gt;Blueborne vulnerabilities impact devices&lt;/a&gt;&lt;a name=&quot;blue&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#blueref&quot;&gt;_↩︎&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">MTP implementation runs on most desktop environments without a problem. Except on KDE where it has had several problems in identifying and initializing a simple file from any of the devices that have been connected to the system, mainly through the USB port.</summary></entry><entry><title type="html">Manjaro Kde Plasma Error Unknown Application Folder</title><link href="http://localhost:4000/manjaro-kde-plasma-error-unknown-application-folder/" rel="alternate" type="text/html" title="Manjaro Kde Plasma Error Unknown Application Folder" /><published>2017-12-14T12:28:52-06:00</published><updated>2017-12-14T12:28:52-06:00</updated><id>http://localhost:4000/manjaro-kde-plasma-error-unknown-application-folder</id><content type="html" xml:base="http://localhost:4000/manjaro-kde-plasma-error-unknown-application-folder/">&lt;p&gt;It’s apparently a foolish idea to login as root from a file manager on Plasma KDE.&lt;/p&gt;
 
 &lt;p&gt;This was exactly what caused a number of problems, and among them, most notably, that I could not get past the login screen.&lt;/p&gt;
 
@@ -200,7 +212,7 @@
 
 &lt;p&gt;On the same post that for example was highlighted earlier, there is useful information as why running as root as KDE is altogether discouraged:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/dont-run-as-root-on-kde.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">It’s apparently a foolish idea to login as root from a file manager on Plasma KDE.</summary></entry><entry><title type="html">Screen Locker Broken Manjaro Kde</title><link href="https://bindkey.github.io/screen-locker-broken-manjaro-kde/" rel="alternate" type="text/html" title="Screen Locker Broken Manjaro Kde" /><published>2017-12-09T12:58:20-06:00</published><updated>2017-12-09T12:58:20-06:00</updated><id>https://bindkey.github.io/screen-locker-broken-manjaro-kde</id><content type="html" xml:base="https://bindkey.github.io/screen-locker-broken-manjaro-kde/">&lt;p&gt;While updating a fresh installation of Manjaro KDE, the screen locked.
+&lt;p&gt;&lt;img src=&quot;/images/dont-run-as-root-on-kde.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">It’s apparently a foolish idea to login as root from a file manager on Plasma KDE.</summary></entry><entry><title type="html">Screen Locker Broken Manjaro Kde</title><link href="http://localhost:4000/screen-locker-broken-manjaro-kde/" rel="alternate" type="text/html" title="Screen Locker Broken Manjaro Kde" /><published>2017-12-09T12:58:20-06:00</published><updated>2017-12-09T12:58:20-06:00</updated><id>http://localhost:4000/screen-locker-broken-manjaro-kde</id><content type="html" xml:base="http://localhost:4000/screen-locker-broken-manjaro-kde/">&lt;p&gt;While updating a fresh installation of Manjaro KDE, the screen locked.
 Apparently the default settings for the system, enabled this behavior without
 further ado.&lt;/p&gt;
 
@@ -214,98 +226,4 @@ further ado.&lt;/p&gt;
 
 &lt;p&gt;And as the already mentioned answer on the unix.stackexchange.com site suggested, it was necessary to reload the image again.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/chroot-answer-mkinitcpio.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">While updating a fresh installation of Manjaro KDE, the screen locked. Apparently the default settings for the system, enabled this behavior without further ado.</summary></entry><entry><title type="html">Configuring Kakoune Kakrc</title><link href="https://bindkey.github.io/configuring-kakoune-kakrc/" rel="alternate" type="text/html" title="Configuring Kakoune Kakrc" /><published>2017-12-06T11:50:38-06:00</published><updated>2017-12-06T11:50:38-06:00</updated><id>https://bindkey.github.io/configuring-kakoune-kakrc</id><content type="html" xml:base="https://bindkey.github.io/configuring-kakoune-kakrc/">&lt;p&gt;Configuring the &lt;a href=&quot;https://github.com/mawww/kakoune&quot; target=&quot;_blank&quot;&gt;kakoune text editor&lt;/a&gt; initialization file has been nothing short of a chore, as it requires the path environment to be correctly set, before any changes on the &lt;code&gt;kakrc&lt;/code&gt; take ahold of the settings.&lt;/p&gt;
-
-&lt;p&gt;As the tutorial suggests, see &lt;a href=&quot;https://github.com/mawww/kakoune#configuration-autoloading&quot; target=&quot;_blank&quot;&gt;Configuration and autoloading&lt;/a&gt;, if it is launched with the &lt;code&gt;-n&lt;/code&gt; switch, kakoune will source the &lt;code&gt;../share/kak/kakrc&lt;/code&gt;, but on a unrelated issue but nonetheless relevant about the correct location for the initialization file, the developer clearly stated that:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;The kakrc file in share is Kakounes init script, it is not intended to be user edited. It is actually that script that will load your user configuration in ~/.config/kak/kakrc.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/dont-use-share-kakrc.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Thus, it is necessary to set the environment first on any Unix system. The command &lt;code&gt;setenv&lt;/code&gt; is used for the &lt;strong&gt;csh&lt;/strong&gt; shell, whereas in &lt;strong&gt;bash&lt;/strong&gt;, this is accomplished through the &lt;code&gt;export&lt;/code&gt; command.&lt;/p&gt;
-
-&lt;p&gt;To find out whether for example, &lt;code&gt;XDG_CONFIG_HOME&lt;/code&gt; was set, is necessary to invoke on the terminal:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; printenv XDG_CONFIG_HOME
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;which if it does not return a value, the environment has not been set yet.&lt;/p&gt;
-
-&lt;p&gt;To set the environment across sessions, note it accordingly on your &lt;code&gt;bashrc&lt;/code&gt; file with the &lt;code&gt;export&lt;/code&gt; command:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; export XDG_CONFIG_HOME=$HOME/.config
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;create a directory &lt;strong&gt;kak&lt;/strong&gt; under that environment, and further create your init file &lt;strong&gt;kakrc&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Most of the available settings will be available without further modifications. That is, some of the commands that are loaded by not using a &lt;code&gt;kakrc&lt;/code&gt; file, will not have to be further tweaked with.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; colorscheme &amp;lt;tab completion&amp;gt; &amp;lt;name of theme&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;can be identified without a problem.&lt;/p&gt;
-
-&lt;p&gt;There are, however, a handful of those that would have to be further tweaked with, in order to load the &lt;strong&gt;kakrc&lt;/strong&gt; init file correctly.&lt;/p&gt;
-
-&lt;p&gt;Take for example, &lt;code&gt;autowrap-enable&lt;/code&gt;, which normally applies soft wrap manipulation to the lines.&lt;/p&gt;
-
-&lt;p&gt;According to the developer,&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;autowrapping is provided by the autowrap.kak script (which should be loaded by default), enable it for a buffer with the autowrap-enable command, that you probably want to put in a hook (for example if you want to always enable autowrap, add hook global WinCreate .* %{ autowrap-enable } in your kakrc. the autowrap_column option controls the column on which to autowrap.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;See &lt;a href=&quot;https://github.com/mawww/kakoune/issues/419&quot; target=&quot;_blank&quot;&gt;Noob questions&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/autowrap-kakrc.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Further customizations to map certain keys are also necessary.&lt;/p&gt;
-
-&lt;p&gt;For example, to map the &lt;code&gt;\&lt;/code&gt; backslash key to say the &lt;code&gt;;&lt;/code&gt; semicolon., it’s imperative to precede the *&lt;em&gt;*&lt;/em&gt; key with the &lt;code&gt;%&lt;/code&gt; percent sign and further enclose the &lt;code&gt;\&lt;/code&gt; backslash key within curly brackets &lt;code&gt;{}&lt;/code&gt;, so the final code would be something like:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; map buffer insert %{\} ';' 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;of course, if the settings are desirable to be loaded globally, then&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; map global insert %{\} ';'
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;needs to be specified accordingly on the initialization file.&lt;/p&gt;
-
-&lt;p&gt;See for example this issue: &lt;a href=&quot;https://github.com/mawww/kakoune/issues/419&quot; target=&quot;_blank&quot;&gt;can’t map to backslash&lt;/a&gt;, which touched upon the problem, and further linked &lt;a href=&quot;https://github.com/mawww/kakoune/issues/1049&quot;&gt;https://github.com/mawww/kakoune/issues/1049&lt;/a&gt; and &lt;a href=&quot;https://github.com/mawww/kakoune/issues/1221&quot;&gt;https://github.com/mawww/kakoune/issues/1221&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;It’s certainly two-fold that by specifying:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; map buffer insert ';' \ 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;the behavior to have the &lt;code&gt;\&lt;/code&gt; inserted, is easily accomplished, as shown on the example above, but the same is not true, by having the same characters inversed within the strings, that would yield the correct results.&lt;/p&gt;
-
-&lt;p&gt;for example whereas&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; map buffer insert ';' \ 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;is correct, a simple &lt;code&gt;map buffer insert '\' ;&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;throws an error with the message &lt;code&gt;parse error: unterminated string '...'&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;It’s therefore necessary to have:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; map buffer insert %{;} \
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;the same is true if one were to &lt;code&gt;map buffer insert '\' %{;}&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;one of the methods that would work across buffers, is to have such characters enclosed within curly brackets and further preceded by the &lt;code&gt;%&lt;/code&gt; sign&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; map buffer insert %{\} %{;} 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;and&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; map buffer insert %{;} %{\} 
-&lt;/code&gt;&lt;/pre&gt;</content><author><name></name></author><summary type="html">Configuring the kakoune text editor initialization file has been nothing short of a chore, as it requires the path environment to be correctly set, before any changes on the kakrc take ahold of the settings.</summary></entry></feed>
+&lt;p&gt;&lt;img src=&quot;/images/chroot-answer-mkinitcpio.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">While updating a fresh installation of Manjaro KDE, the screen locked. Apparently the default settings for the system, enabled this behavior without further ado.</summary></entry></feed>
